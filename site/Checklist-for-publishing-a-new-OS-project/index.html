@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://kontent-ai.github.io/wiki/Checklist-for-publishing-a-new-OS-project/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Checklist for publishing a new OS project - Kontent.ai GitHub docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Kontent.ai GitHub docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../CI-and-Automation-guidelines/" class="nav-link">Continuous Integration and Continuous Delivery</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Checklist for publishing a new OS project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Developer-experience-maintenance-process/" class="nav-link">Developer experience maintenance process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Duties-of-a-Repository-Maintainer/" class="nav-link">Duties of a Repository Maintainer</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Guidelines-for-GitHub-permissions-in-Kontent.ai-organization/" class="nav-link">Guidelines for GitHub permissions in Kontent.ai organization</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Guidelines-for-Kontent.ai-related-tools/" class="nav-link">Guidelines for Kontent.ai related tools</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Guidelines-for-SDK-developers/" class="nav-link">Guidelines for SDK developers</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Java-GitHub-Actions-Guidelines/" class="nav-link">Java GitHub Actions Guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../JavaScript-Node.js-GitHub-Actions-Guidelines/" class="nav-link">JavaScript Node.js GitHub Actions Guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Kentico%27s-best-practices-for-.csproj-files/" class="nav-link">Version management</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Kontent.ai-best-practices-for-.csproj-files/" class="nav-link">Version management</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Naming-conventions/" class="nav-link">Naming conventions</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../New-REST-API-feature/" class="nav-link">New REST API feature</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../PHP-GitHub-Actions-Guidelines/" class="nav-link">PHP GitHub Actions Guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Release-%26-version-management-of-.NET-projects/" class="nav-link">Milestones:</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Ruby-GitHub-Actions-Guidelines/" class="nav-link">Ruby GitHub Actions Guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Swift-GitHub-Actions-Guidelines/" class="nav-link">Swift GitHub Actions Guidelines</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../CI-and-Automation-guidelines/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Developer-experience-maintenance-process/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#repository-name" class="nav-link">Repository name</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#dedicate-a-maintainer" class="nav-link">Dedicate a maintainer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#community-profile" class="nav-link">Community profile</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#description-website-and-topics" class="nav-link">Description, website, and topics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#readme-documentation" class="nav-link">README (Documentation)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#contributing" class="nav-link">Contributing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#license" class="nav-link">License</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#issue-pull-request-templates-code-of-conduct" class="nav-link">Issue &amp; pull request templates &amp; Code of Conduct</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#github-features" class="nav-link">GitHub features</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#expectations" class="nav-link">Expectations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#badges" class="nav-link">Badges</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#tests" class="nav-link">Tests</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#review" class="nav-link">Review</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#continuous-integration" class="nav-link">Continuous Integration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#protect-the-master-branch" class="nav-link">Protect the master branch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#add-collaborating-teams" class="nav-link">Add collaborating teams</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#releases" class="nav-link">Releases</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#want-to-make-the-repo-even-more-friendly" class="nav-link">Want to make the repo even more friendly?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>Before you publish any repository under Kontent.ai organization on GitHub, please go through this checklist and make sure the repository is up to standards.</p>
+<ul>
+<li><a href="#Repository-name">Repository name</a></li>
+<li><a href="#dedicate-a-maintainer">Dedicate a maintainer</a>🔒</li>
+<li><a href="#community-profile">Fulfill Community profile</a>🔒</li>
+<li><a href="#github-features">Set up GitHub features</a>🔒</li>
+<li><a href="#expectations">Set Expectations</a>🔒</li>
+<li><a href="#badges">Add badges</a></li>
+<li><a href="#tests">Add automatic tests</a>❔</li>
+<li><a href="#continuous-integration">Set up Continuous Integration</a>❔</li>
+<li><a href="#protect-the-master-branch">Protect Master Branch</a></li>
+<li><a href="#add-collaborating-teams">Add collaborating teams</a>🔒</li>
+<li><a href="#releases">Define release process</a></li>
+</ul>
+<h1 id="repository-name">Repository name<a class="headerlink" href="#repository-name" title="Permanent link">&para;</a></h1>
+<p>Set repository name according to the <a href="./Naming-conventions">Naming conventions</a>.</p>
+<h1 id="dedicate-a-maintainer">Dedicate a maintainer<a class="headerlink" href="#dedicate-a-maintainer" title="Permanent link">&para;</a></h1>
+<ul>
+<li><em>🔒 Required for private repositories too</em></li>
+</ul>
+<p>It's essential to decide who's going to be responsible for the repository. Every repository needs to have an owner (a person or a team) who will actively:
+- set the right expectations about the project
+- keep the repository in a good shape</p>
+<p>Read more on <a href="Duties-of-a-Repository-Maintainer">the duties of a maintainer</a>.</p>
+<p>Mark this user into the <a href="https://help.github.com/articles/about-code-owners/">CODEOWNERS</a> file. See an <a href="https://github.com/kontent-ai/KInspector/blob/master/.github/CODEOWNERS">example</a>.</p>
+<h1 id="community-profile"><a href="https://help.github.com/articles/about-community-profiles-for-public-repositories/">Community profile</a><a class="headerlink" href="#community-profile" title="Permanent link">&para;</a></h1>
+<ul>
+<li>should be "all green"</li>
+<li>please note that it's available only for public repos and not for forked repos
+<img alt="Green community profile" src="https://i.imgur.com/DVRjA41.png" /></li>
+</ul>
+<h2 id="description-website-and-topics">Description, website, and topics<a class="headerlink" href="#description-website-and-topics" title="Permanent link">&para;</a></h2>
+<ul>
+<li><em>🔒 Required for private repositories too</em></li>
+</ul>
+<p>Fill in basic information about the project to make it easy to find it.
+<img alt="Topics" src="https://i.imgur.com/4lNqMK6.png" /></p>
+<p>⚠ Tag the repository based on the division according to <a href="https://github.com/kontent-ai/.github/wiki/Naming-conventions#github-repositories">Naming conventions</a>.</p>
+<p>In the case of private repositories, add a "private-repository" tag.</p>
+<h2 id="readme-documentation">README (Documentation)<a class="headerlink" href="#readme-documentation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><em>🔒 Required for private repositories too</em></li>
+</ul>
+<p>README should contain:</p>
+<ul>
+<li>installation instructions</li>
+<li>basic demonstration of usage</li>
+<li>code examples (if applicable)</li>
+</ul>
+<p>More complex topics and examples can be covered in separate articles in GitHub Wiki (or an external system such as ReadTheDocs).</p>
+<blockquote>
+<p>The template of the README file is stored in <a href="https://github.com/kontent-ai/repo-template">repo-template</a>.</p>
+</blockquote>
+<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h2>
+<p>From the README or CONTRIBUTING files, it should be clear:</p>
+<ul>
+<li>how to set up the project in order to contribute</li>
+<li>this may include creating a PowerShell or other (e.g. build) script to make it easy for the contributors</li>
+<li>what kind of contributions are accepted and welcome</li>
+<li>what's the definition of done (use PR templates)</li>
+<li>which communication channels should be used to get in touch with the maintainer</li>
+</ul>
+<blockquote>
+<p>The template of CONTRIBUTING file is stored in <a href="https://github.com/kontent-ai/repo-template">repo-template</a>.</p>
+</blockquote>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p>Use the MIT license and set "Kontent.ai" as the copyright holder. If you want to use a different license, please contact the <a href="mailto:devrel@kontent.ai">DevRel team</a>.</p>
+<p>Store the license in the "LICENSE.md" file in the root of the repository because it is being linked from "CONTRIBUTING.md" document.</p>
+<blockquote>
+<p>The template of the LICENSE file is stored in <a href="https://github.com/kontent-ai/repo-template">repo-template</a>.</p>
+</blockquote>
+<h2 id="issue-pull-request-templates-code-of-conduct">Issue &amp; pull request templates &amp; Code of Conduct<a class="headerlink" href="#issue-pull-request-templates-code-of-conduct" title="Permanent link">&para;</a></h2>
+<p>Use <a href="https://github.com/kontent-ai/repo-template">repo-template</a> for the templates and Code of Conduct.</p>
+<h1 id="github-features">GitHub features<a class="headerlink" href="#github-features" title="Permanent link">&para;</a></h1>
+<ul>
+<li><em>🔒 Required for private repositories too</em>
+Decide which features you turn on or off. This will help set expectations.</li>
+</ul>
+<p><img alt="GH Features" src="https://i.imgur.com/i6PICQv.png" /></p>
+<h1 id="expectations">Expectations<a class="headerlink" href="#expectations" title="Permanent link">&para;</a></h1>
+<ul>
+<li><em>🔒 Required for private repositories too</em></li>
+</ul>
+<p>You should make clear:
+- what kind of support users can expect (README)
+  - GH issues vs. StackOverflow, etc.
+- how to submit bugs (README + Issue/PR templates)
+- what the future of the project is and whether it's actively developed (set up a <a href="https://github.com/kontent-ai/delivery-sdk-net/projects">project/backlog</a> or <a href="https://help.github.com/articles/archiving-a-github-repository/">archive</a> a repo that's no longer being developed)</p>
+<p>In case of private repos, please add the following note to the top of the README:</p>
+<blockquote>
+<p>🛈 This repository contains Kontent.ai's internal code that is of no use to the general public. Please explore our <a href="https://github.com/kontent-ai">other repositories</a>.</p>
+</blockquote>
+<p>Set up an issue tracker. Most likely, you'll use GitHub issues. Take your time to set up labels and milestones.</p>
+<h1 id="badges">Badges<a class="headerlink" href="#badges" title="Permanent link">&para;</a></h1>
+<p>Use badges to make it easy to find basic information about the status of the project.</p>
+<p>Pro tip: generate custom badges via https://shields.io/ <img alt="Custom Badge" src="https://img.shields.io/badge/hellow-world-yellowgreen.svg?style=popout&amp;logo=github" /></p>
+<p>Examples:
+* Continuous Integration
+    * <a href="https://github.com/kontent-ai/kontent-delivery-sdk-net/actions/workflows/integrate.yml"><img alt="Build &amp; Test" src="https://github.com/kontent-ai/kontent-delivery-sdk-net/actions/workflows/integrate.yml/badge.svg" /></a>
+* Test coverage
+    * <a href="https://codeclimate.com/github/codeclimate/codeclimate/badges">Code Climate</a> <img alt="Code Climate Coverage" src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" />
+* Static code analysis result
+    * <a href="https://codeclimate.com/github/codeclimate/codeclimate/badges">Code Climate</a> <img alt="Code Climate" src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" />
+    * <a href="https://sonarcloud.io/documentation/user-guide/project-page/">SonarCloud</a>
+* Deployment/Package status
+    * <a href="https://www.netlify.com/blog/2019/01/29/sharing-the-love-with-netlify-deployment-badges/">Netlify</a>
+    * <a href="https://docs.npmjs.com/">npm</a>
+    * <a href="https://docs.microsoft.com/en-us/nuget/">nuget</a>
+* Chat
+    * <a href="https://stackoverflow.com/">Stack Overflow</a> <a href="https://stackoverflow.com/tags/kontent-ai"><img alt="Stack Overflow" src="https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&amp;logoColor=white" /></a>
+    * <a href="https://discord.gg/SKCxwPtevJ">Discord</a> <a href="https://discord.gg/SKCxwPtevJ"><img alt="Discord" src="https://img.shields.io/discord/821885171984891914?label=Discord&amp;logo=Discord&amp;logoColor=white" /></a> (<img alt="Konten Discord" src="https://img.shields.io/discord/821885171984891914?color=%237289DA&amp;label=Kontent%20Discord&amp;logo=discord" />)</p>
+<h1 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h1>
+<ul>
+<li><em>❔ Optional, but highly recommended.</em></li>
+</ul>
+<p>Include at least a basic set of (unit) tests.</p>
+<h1 id="review">Review<a class="headerlink" href="#review" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Ask your colleagues to do a code review, basic testing, and proofreading before you publish any project. The <a href="mailto:devrel@kontent.ai">DevRel team</a> may also help.</li>
+</ul>
+<h1 id="continuous-integration">Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permanent link">&para;</a></h1>
+<ul>
+<li><em>❔ Optional, but highly recommended.</em></li>
+</ul>
+<p>Setting up CI, makes it easy for contributors to know whether their code works as expected. You can find more info about CI practices in the <a href="https://github.com/kontent-ai/.github/wiki/CI-and-Automation-Guidelines">separate article</a>.</p>
+<ul>
+<li>Set up a build agent - <a href="https://docs.github.com/en/actions">GitHub Actions</a></li>
+<li>Make it run tests</li>
+<li>Fail builds on failed tests</li>
+<li>Set up <a href="https://docs.github.com/en/github/administering-a-repository/about-protected-branches#require-status-checks-before-merging">status checks</a> via webhooks</li>
+</ul>
+<h1 id="protect-the-master-branch">Protect the master branch<a class="headerlink" href="#protect-the-master-branch" title="Permanent link">&para;</a></h1>
+<p>You can learn more about branch protection in the <a href="https://docs.github.com/en/github/administering-a-repository/managing-a-branch-protection-rule#about-branch-protection-rules">documentation</a>.
+<img alt="Branch protection" src="https://i.imgur.com/B4LVfUu.png" /></p>
+<h1 id="add-collaborating-teams">Add collaborating teams<a class="headerlink" href="#add-collaborating-teams" title="Permanent link">&para;</a></h1>
+<ul>
+<li><em>🔒 Required for private repositories too</em>
+<img alt="Collaborators" src="https://i.imgur.com/0qkbWe1.png" /><blockquote>
+<p>In most cases, it'll be <code>Admin</code> permission for the Developer Relations team and <code>Write</code> permission for the Employees team.</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="releases">Releases<a class="headerlink" href="#releases" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Create an initial release</li>
+<li><strong>Always</strong> follow <a href="http://semver.org/">Semantic Versioning</a></li>
+</ul>
+<h1 id="want-to-make-the-repo-even-more-friendly">Want to make the repo even more friendly?<a class="headerlink" href="#want-to-make-the-repo-even-more-friendly" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Read the <a href="https://opensource.guide/starting-a-project/#your-pre-launch-checklist">Pre-launch checklist</a>.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
