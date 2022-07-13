@@ -1,0 +1,13 @@
+theme:
+    name: mkdocs
+    locale: en
+    highlightjs: true
+
+markdown_extensions:
+    toc:
+        permalink: true
+    admonition: {}
+
+
+site_name: Kontent.ai GitHub docs
+site_url: https://kontent-ai.github.io/wiki/
