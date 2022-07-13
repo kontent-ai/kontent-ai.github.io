@@ -1,10 +1,13 @@
 theme:
     name: material
+    palette:
+      scheme: slate
+      primary: teal
     locale: en
     highlightjs: true
     custom_dir: overrides
     icon:
-      logo: header/kai-logo-symbol-white-rgb.svg
+      logo: header/kai-logo-symbol-white-rgb
 
 markdown_extensions:
     toc:
