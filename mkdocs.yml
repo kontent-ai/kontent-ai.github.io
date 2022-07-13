@@ -2,6 +2,7 @@ theme:
     name: material
     locale: en
     highlightjs: true
+    custom_dir: overrides
 
 markdown_extensions:
     toc:
