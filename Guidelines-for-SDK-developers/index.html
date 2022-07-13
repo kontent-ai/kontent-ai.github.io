@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://kontent-ai.github.io/wiki/Guidelines-for-SDK-developers/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Guidelines for SDK developers - Kontent.ai GitHub docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Kontent.ai GitHub docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../CI-and-Automation-guidelines/" class="nav-link">Continuous Integration and Continuous Delivery</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Checklist-for-publishing-a-new-OS-project/" class="nav-link">Checklist for publishing a new OS project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Developer-experience-maintenance-process/" class="nav-link">Developer experience maintenance process</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Duties-of-a-Repository-Maintainer/" class="nav-link">Duties of a Repository Maintainer</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Guidelines-for-GitHub-permissions-in-Kontent.ai-organization/" class="nav-link">Guidelines for GitHub permissions in Kontent.ai organization</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Guidelines-for-Kontent.ai-related-tools/" class="nav-link">Guidelines for Kontent.ai related tools</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Guidelines for SDK developers</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Home/" class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Java-GitHub-Actions-Guidelines/" class="nav-link">Java GitHub Actions Guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../JavaScript-Node.js-GitHub-Actions-Guidelines/" class="nav-link">JavaScript Node.js GitHub Actions Guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Kentico%27s-best-practices-for-.csproj-files/" class="nav-link">Version management</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Kontent.ai-best-practices-for-.csproj-files/" class="nav-link">Version management</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Naming-conventions/" class="nav-link">Naming conventions</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../New-REST-API-feature/" class="nav-link">New REST API feature</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../PHP-GitHub-Actions-Guidelines/" class="nav-link">PHP GitHub Actions Guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Release-%26-version-management-of-.NET-projects/" class="nav-link">Milestones:</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Ruby-GitHub-Actions-Guidelines/" class="nav-link">Ruby GitHub Actions Guidelines</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Swift-GitHub-Actions-Guidelines/" class="nav-link">Swift GitHub Actions Guidelines</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Guidelines-for-Kontent.ai-related-tools/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Home/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#expected-functionality" class="nav-link">Expected functionality</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#ensuring-backward-compatibility" class="nav-link">Ensuring backward compatibility</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#returned-data" class="nav-link">Returned data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#sending-http-headers" class="nav-link">Sending HTTP headers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#delivery-api-limits" class="nav-link">Delivery API limits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#naming-conventions" class="nav-link">Naming conventions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#os-project-requirements" class="nav-link">OS project requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>Welcome to the Kontent.ai guidelines for SDK developers! These guidelines cover all the requirements needed to create SDKs for the <a href="https://kontent.ai/learn/reference/delivery-api/">Kontent.ai Delivery API</a> and should give you a solid starting point for developing SDKs in the framework of your choice.</p>
+<p>The guidelines cover the following topics:</p>
+<ul>
+<li><a href="#expected-functionality">Expected SDK functionality</a></li>
+<li><a href="#ensuring-backward-compatibility">Ensuring backward compatibility</a></li>
+<li><a href="#returned-data">Format of the returned data</a></li>
+<li><a href="#sending-http-headers">Sending HTTP headers</a></li>
+<li><a href="#delivery-api-limits">Delivery API limits</a></li>
+<li><a href="#naming-conventions">Naming conventions</a></li>
+<li><a href="#os-project-requirements">OS project requirements</a></li>
+</ul>
+<h2 id="expected-functionality">Expected functionality<a class="headerlink" href="#expected-functionality" title="Permanent link">&para;</a></h2>
+<h3 id="required-endpoints">Required endpoints<a class="headerlink" href="#required-endpoints" title="Permanent link">&para;</a></h3>
+<p>The SDK must support the following Delivery API endpoints:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>Retrieve a list of content items <br/> <code>https://deliver.kontent.ai/{project_id}/items</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Retrieve a content item <br/> <code>https://deliver.kontent.ai/{project_id}/items/{item_codename}</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Retrieve a list of content types <br/> <code>https://deliver.kontent.ai/{project_id}/types</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Retrieve a content type <br/> <code>https://deliver.kontent.ai/{project_id}/types/{type_codename}</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Retrieve a content type element <br/> <code>https://deliver.kontent.ai/{project_id}/types/{type_codename}/elements/{element_codename}</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Retrieve a list of taxonomy groups <br/> <code>https://deliver.kontent.ai/{project_id}/taxonomies</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Retrieve a taxonomy group <br/> <code>https://deliver.kontent.ai/{project_id}/taxonomies/{taxonomy_group_codename}</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="feature-support">Feature support<a class="headerlink" href="#feature-support" title="Permanent link">&para;</a></h3>
+<p>The SDK should also support the following features:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delivery Preview API</td>
+<td>Support for <a href="https://kontent.ai/learn/tutorials/develop-apps/build-strong-foundation/set-up-preview/">previewing unpublished content items</a> via the Delivery Preview API.</td>
+</tr>
+<tr>
+<td>Content filtering</td>
+<td>Support for the <a href="https://kontent.ai/learn/reference/delivery-api/#tag/Filtering-content">filtering parameters</a> when making queries to the Delivery API.</td>
+</tr>
+<tr>
+<td>Localization</td>
+<td>Support for retrieving localized content, that is using the <code>language</code> query parameter when retrieving content items.</td>
+</tr>
+<tr>
+<td>Rendering Rich text elements</td>
+<td>Support for rendering content (in other words, transforming HTML 5 fragments) of the built-in Rich text elements. This content includes links, images, components, and other content items.</td>
+</tr>
+<tr>
+<td>Resolving links</td>
+<td>Support for resolving hypertext links to other content items within the built-in Rich text elements.</td>
+</tr>
+<tr>
+<td>Retrieving linked items</td>
+<td>Support for retrieving content items and components that are used within other content items.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dynamic-vs-static-typing">Dynamic vs. static typing<a class="headerlink" href="#dynamic-vs-static-typing" title="Permanent link">&para;</a></h3>
+<p>We recommend that you use statically typed models for the SDK, if supported by a given stack. Otherwise, use dynamically typed models if your stack supports only those.</p>
+<p>For information about content elements and their data types, see <a href="#content-element-data-types">Content element data types</a> below.</p>
+<h2 id="ensuring-backward-compatibility">Ensuring backward compatibility<a class="headerlink" href="#ensuring-backward-compatibility" title="Permanent link">&para;</a></h2>
+<p>The Delivery API evolves in a way that is backward compatible. This means that, as long as SDKs and client applications follow a few rules, changes in the Delivery API won't break them.</p>
+<p>The following changes to the Delivery API are <strong>NOT</strong> considered breaking changes and you should cope with them in your SDK.</p>
+<ul>
+<li>Add a new property to JSON objects.</li>
+<li>Change the order of JSON object properties (with exceptions, see below).</li>
+<li>Add a new type of content element.</li>
+<li>Add a new HTML element to the Rich text elements.</li>
+<li>Add a new attribute to HTML element in the Rich text elements.</li>
+<li>Add a new value to HTML element attribute in the Rich text elements.</li>
+<li>Change the order of HTML element attributes in the Rich text elements.</li>
+<li>Represent some characters as HTML entities.</li>
+</ul>
+<p><strong>Note</strong>: If a breaking change should happen, we will provide a new version of the Delivery API (alongside the current version of the API) together with new SDK guidelines. We will let you know in time before this happens.</p>
+<p>You can always rely on the following features:</p>
+<ul>
+<li>Elements in content types are in the same order as in Kontent.ai UI.</li>
+<li>Elements in content item variants are in the same order as in content types.</li>
+<li>Options in Multiple choice elements in content types are in the same order as in Kontent.ai UI.</li>
+<li>Selected options in Multiple choice elements in content item variants are in the same order as in content types.</li>
+</ul>
+<p>Here are a few tips to help you deal with backward-compatible changes in the Delivery API:</p>
+<ul>
+<li>Ignore unknown content elements.</li>
+<li>Parse HTML with HTML 5 parses. If possible, do not use regular expressions.</li>
+<li>Ignore unknown HTML elements – keep their content, but ignore their opening and closing tags.</li>
+</ul>
+<h2 id="returned-data">Returned data<a class="headerlink" href="#returned-data" title="Permanent link">&para;</a></h2>
+<p>The Delivery API returns data in the JSON format both for successful and <a href="#errors">unsuccessful</a> requests.</p>
+<h3 id="object-model-descriptions-of-the-returned-data">Object model descriptions of the returned data<a class="headerlink" href="#object-model-descriptions-of-the-returned-data" title="Permanent link">&para;</a></h3>
+<p>When you query endpoints for retrieving all <code>/items</code>, <code>/types</code>, or <code>/taxonomies</code>, the Delivery API returns a paginated listing response with content that matches your specific query. In each case, the listing response contains a pagination object with information about the number of retrieved items, and a link to the next page of results.</p>
+<p>You can find <a href="https://kontent.ai/learn/reference/delivery-api/#operation/list-content-items">descriptions and examples of the listing responses</a> for content items, content types, and taxonomy groups in our API reference.</p>
+<p>For details on the structure of the individual objects returned by the Delivery API (such as content items, content types, and taxonomy groups), see these pages in the API reference:</p>
+<ul>
+<li><a href="https://kontent.ai/learn/reference/delivery-api/#section/Content-item-object">Content item model</a></li>
+<li><a href="https://kontent.ai/learn/reference/delivery-api/#section/Content-type-object">Content type model</a></li>
+<li><a href="https://kontent.ai/learn/reference/delivery-api/#section/Taxonomy-group-object">Taxonomy group model</a></li>
+</ul>
+<h3 id="content-element-data-types">Content element data types<a class="headerlink" href="#content-element-data-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Content element</th>
+<th>Data type</th>
+<th>Limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text</td>
+<td>string</td>
+<td>Hard limit of 100,000 characters.</td>
+</tr>
+<tr>
+<td>Rich text</td>
+<td>string</td>
+<td>Hard limit of 100,000 characters. <strong>Note</strong>: The limit includes HTML markup and whitespace characters.</td>
+</tr>
+<tr>
+<td>Multiple choice</td>
+<td>array of strings (selected options)</td>
+<td>Can contain up to 250 predefined options.</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>decimal</td>
+<td>Numbers have the following format: "##########.##########" – 10 numbers before and after the decimal separator.</td>
+</tr>
+<tr>
+<td>Date &amp; time</td>
+<td>string</td>
+<td><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a> formatted string in the following format: YYYY-MM-DDTHH:MM:SSZ.</td>
+</tr>
+<tr>
+<td>Asset</td>
+<td>asset reference</td>
+<td>The maximum asset size is 2 GB.</td>
+</tr>
+<tr>
+<td>Modular content</td>
+<td>array of strings (codenames of selected content items)</td>
+<td>No limitation.</td>
+</tr>
+<tr>
+<td>URL slug</td>
+<td>string</td>
+<td>Hard limit of 100,000 characters.</td>
+</tr>
+<tr>
+<td>Custom element</td>
+<td>string</td>
+<td>Hard limit of 100,000 characters. <strong>Note</strong>: Custom elements behave as simple text-based elements.</td>
+</tr>
+</tbody>
+</table>
+<p>You can find <a href="https://kontent.ai/learn/reference/delivery-api/#tag/Content-elements">example JSON values for each of the content elements</a> in our API reference.</p>
+<h3 id="empty-response-vs-404-error">Empty response vs. 404 error<a class="headerlink" href="#empty-response-vs-404-error" title="Permanent link">&para;</a></h3>
+<p>The Delivery API differentiates between a query that doesn't bring any results (and gives a 200 OK response) and a query that gives a 404 Not found response.</p>
+<p>For example, when you request a single item by codename and the item doesn't exist, the Delivery API responds with a 404 Not found. On the other hand, if you request items (with optional filter) and no item (or items matching the filtering criteria) exists, the Delivery API responds with 200 OK and returns an empty array of items. This applies to endpoints such as <code>/items</code>, <code>/types</code>, and <code>/taxonomies</code>.</p>
+<h3 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h3>
+<p>The Delivery API returns errors in the JSON format. Every error message has the same format. Here's an example of a general error message:</p>
+<pre><code class="language-json">{
+  &quot;message&quot;: &quot;No HTTP resource was found that matches the request. Please read API documentation at https://kontent.ai/learn/reference/delivery-api.&quot;,
+  &quot;request_id&quot;: &quot;|38a7b46fc8597a4aa1ab0169449cac54.c37263a1_&quot;,
+  &quot;error_code&quot;: 1,
+  &quot;specific_code&quot;: 0
+}
+</code></pre>
+<p>The <code>message</code> property in the error message provides a clear specification of what went wrong when making the request.</p>
+<h2 id="sending-http-headers">Sending HTTP headers<a class="headerlink" href="#sending-http-headers" title="Permanent link">&para;</a></h2>
+<h3 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">&para;</a></h3>
+<p>To gauge how much your SDK is used, we strongly recommend that the SDK sends a <code>X-KC-SDKID</code> header with each request to the API. The value of the header should be formatted like this <code>&lt;SDK package origin&gt;;&lt;SDK name&gt;;&lt;SDK version&gt;</code>, for example, <code>nuget.org;Kontent.Delivery;9.0.0</code> for version 9 of the <a href="https://github.com/kontent-ai/delivery-sdk-net">Delivery .NET SDK</a>.</p>
+<p>This way we can identify the requests coming from your SDK and later provide you with information about its usage.</p>
+<h3 id="requesting-latest-content">Requesting latest content<a class="headerlink" href="#requesting-latest-content" title="Permanent link">&para;</a></h3>
+<p>By default, the Delivery API might serve stale content (if cached by the Fastly CDN) for performance reasons. In some cases, such as when <a href="https://kontent.ai/learn/reference/webhooks-reference/">reacting to webhook notifications</a>, you might want to request the latest content from your Kontent.ai project.</p>
+<p>To do this within your SDK, include a <code>X-KC-Wait-For-Loading-New-Content</code> header and set it to <code>true</code> when sending requests to the API.</p>
+<p>Including the header will cause the Delivery API to explicitly fetch new content from the specified Kontent.ai project.</p>
+<h2 id="delivery-api-limits">Delivery API limits<a class="headerlink" href="#delivery-api-limits" title="Permanent link">&para;</a></h2>
+<h3 id="rate-limitation">Rate limitation<a class="headerlink" href="#rate-limitation" title="Permanent link">&para;</a></h3>
+<p>Delivery API requests are primarily served from a CDN network. For such requests, no rate limiting is in place. For uncached requests, a rate limitation of 100 per second and 2000 per minute is enforced. If a limit is reached, server responds with a 429 error and provides a <code>Retry-After</code> header, which tells you how long to wait before a request can be reattempted. All failed requests are safe to retry.</p>
+<h3 id="url-length">URL length<a class="headerlink" href="#url-length" title="Permanent link">&para;</a></h3>
+<p>The length of URLs for the GET requests is limited to 2048 characters. The Delivery API returns an <a href="#errors">error</a> for URLs longer than 2048 characters.</p>
+<h2 id="naming-conventions">Naming conventions<a class="headerlink" href="#naming-conventions" title="Permanent link">&para;</a></h2>
+<p>Here are some recommendations on naming conventions for the SDK project name, the namespaces in your project, and package names. Following these recommendations will help others find the SDK more easily.</p>
+<h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Main namespace: Kontent.ai</li>
+<li>Sub namespace: Name of the API (e.g., Delivery)</li>
+<li>Namespace separator: as per target platform</li>
+<li>Letter case: as per target platform</li>
+</ul>
+<h3 id="project-name-github-repo-name">Project name (GitHub repo name)<a class="headerlink" href="#project-name-github-repo-name" title="Permanent link">&para;</a></h3>
+<p>We recommend that the project for your SDK uses the following naming pattern: <code>[Main namespace] &lt;Sub Namespace&gt; &lt;Platform&gt; [Paradigm] SDK</code>. For example, for the Delivery .NET SDK, the project name would be <em>Kontent.ai Delivery .NET SDK</em>.</p>
+<h2 id="os-project-requirements">OS project requirements<a class="headerlink" href="#os-project-requirements" title="Permanent link">&para;</a></h2>
+<p>For your SDK to be included within the list Kontent.ai SDKs, the SDK project has to comply with our checklist for <a href="https://github.com/kontent-ai/.github/wiki/Checklist-for-publishing-a-new-OS-project">Publishing an OS project</a>. You can also read <a href="https://github.com/kontent-ai/.github/wiki/Guidelines-for-Kontent-related-tools">Guidelines for building tools around Kontent.ai APIs</a> that should help you meet the requirements for creating a successful tool.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
