@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://kontent-ai.github.io/wiki/Articles/Duties-of-a-Repository-Maintainer/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Duties of a Repository Maintainer - Kontent.ai GitHub docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Kontent.ai GitHub docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Articles <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../CI-and-Automation-guidelines/" class="dropdown-item">Continuous Integration and Continuous Delivery</a>
+</li>
+                                    
+<li>
+    <a href="../Checklist-for-publishing-a-new-OS-project/" class="dropdown-item">Checklist for publishing a new OS project</a>
+</li>
+                                    
+<li>
+    <a href="../Developer-experience-maintenance-process/" class="dropdown-item">Developer experience maintenance process</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Duties of a Repository Maintainer</a>
+</li>
+                                    
+<li>
+    <a href="../Guidelines-for-GitHub-permissions-in-Kontent.ai-organization/" class="dropdown-item">Guidelines for GitHub permissions in Kontent.ai organization</a>
+</li>
+                                    
+<li>
+    <a href="../Guidelines-for-Kontent.ai-related-tools/" class="dropdown-item">Guidelines for Kontent.ai related tools</a>
+</li>
+                                    
+<li>
+    <a href="../Guidelines-for-SDK-developers/" class="dropdown-item">Guidelines for SDK developers</a>
+</li>
+                                    
+<li>
+    <a href="../Java-GitHub-Actions-Guidelines/" class="dropdown-item">Java GitHub Actions Guidelines</a>
+</li>
+                                    
+<li>
+    <a href="../JavaScript-Node.js-GitHub-Actions-Guidelines/" class="dropdown-item">JavaScript Node.js GitHub Actions Guidelines</a>
+</li>
+                                    
+<li>
+    <a href="../Kentico%27s-best-practices-for-.csproj-files/" class="dropdown-item">Version management</a>
+</li>
+                                    
+<li>
+    <a href="../Kontent.ai-best-practices-for-.csproj-files/" class="dropdown-item">Version management</a>
+</li>
+                                    
+<li>
+    <a href="../Naming-conventions/" class="dropdown-item">Naming conventions</a>
+</li>
+                                    
+<li>
+    <a href="../New-REST-API-feature/" class="dropdown-item">New REST API feature</a>
+</li>
+                                    
+<li>
+    <a href="../PHP-GitHub-Actions-Guidelines/" class="dropdown-item">PHP GitHub Actions Guidelines</a>
+</li>
+                                    
+<li>
+    <a href="../Release-%26-version-management-of-.NET-projects/" class="dropdown-item">Milestones:</a>
+</li>
+                                    
+<li>
+    <a href="../Ruby-GitHub-Actions-Guidelines/" class="dropdown-item">Ruby GitHub Actions Guidelines</a>
+</li>
+                                    
+<li>
+    <a href="../Swift-GitHub-Actions-Guidelines/" class="dropdown-item">Swift GitHub Actions Guidelines</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Developer-experience-maintenance-process/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Guidelines-for-GitHub-permissions-in-Kontent.ai-organization/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#the-main-duties" class="nav-link">The main duties</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#setting-expectations" class="nav-link">Setting expectations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#keeping-the-repository-in-a-good-shape" class="nav-link">Keeping the repository in a good shape</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#managing-the-releases-and-keeping-them-in-sync-with-product-development" class="nav-link">Managing the releases and keeping them in sync with product development</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#make-your-life-easier" class="nav-link">💡 Make your life easier</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="the-main-duties">The main duties<a class="headerlink" href="#the-main-duties" title="Permanent link">#</a></h2>
+<p>The maintainer is responsible for:
+- <a href="#setting-expectations">setting <strong>the right expectations</strong> about the project</a>
+- <a href="#keeping-the-repository-in-a-good-shape">keeping the repository <strong>in a good shape</strong></a></p>
+<p>Repository ownership doesn't mean that the owner needs to do all the required work, it means that they ensure the work gets done.</p>
+<h2 id="setting-expectations">Setting expectations<a class="headerlink" href="#setting-expectations" title="Permanent link">#</a></h2>
+<h3 id="responding-to-issues-and-pull-requests">Responding to issues and pull requests<a class="headerlink" href="#responding-to-issues-and-pull-requests" title="Permanent link">#</a></h3>
+<p>To set the expectations correctly, the maintainer will make sure that when an issue or a pull request is submitted, the issuer gets notified that a <strong>human has seen the submission</strong> and <strong>what happens next</strong>. This can mean:
+  - telling the consumer whether the issue/PR will be fixed/merged or not
+  - ETA of how long it will take until the next response or until the issue resolution/PR review
+  - asking for more details</p>
+<h3 id="defining-and-communicating-the-vision">Defining and communicating the vision<a class="headerlink" href="#defining-and-communicating-the-vision" title="Permanent link">#</a></h3>
+<p>It's necessary to clearly express what's the <strong>future of the project</strong>. A good idea is to groom the backlog and decide on what the next major steps will be. A good tool to communicate the vision is the <a href="https://docs.github.com/en/github/managing-your-work-on-github/about-milestones">GitHub Milestones</a> or <a href="https://github.com/features/project-management/">GitHub Projects</a>.</p>
+<h4 id="obsolete-projects">Obsolete projects<a class="headerlink" href="#obsolete-projects" title="Permanent link">#</a></h4>
+<p>If the project is not to be maintained any longer, it's necessary to <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/archiving-a-github-repository">archive</a> it and ideally, add a disclaimer explaining why the repo is archived.</p>
+<h3 id="sla">SLA<a class="headerlink" href="#sla" title="Permanent link">#</a></h3>
+<p><strong>The first response</strong> time and <strong>any follow-up to a customer's reply</strong> should not exceed <strong>5 business days</strong>. If a reply will take longer, it's necessary to update the expectation of the person waiting for the reply.</p>
+<p><strong>The resolution time</strong> depends on an actual issue/PR. Again, keep customer's expectations about the resolution time up to date.</p>
+<h2 id="keeping-the-repository-in-a-good-shape">Keeping the repository in a good shape<a class="headerlink" href="#keeping-the-repository-in-a-good-shape" title="Permanent link">#</a></h2>
+<p>The maintainer must ensure the repository is in a healthy state. This includes:
+- the CI is present, running, and tests are passing
+- there are no stale pull requests - they either get merged (after a review and testing) or closed
+- the backlog of issues is accurate, up-to-date
+  - the issue is labeled correctly, the descriptions are sufficient for anyone from the community to pick them up and process
+- the repo is well documented (READMEs and Wikis are up to date and correspond with the latest version)
+- adherence to standards and platform idioms (e.g. semantic versioning, using the right code style, targeting the right platform versions, adhering to conventions)
+- making sure obsolete and broken packages are marked as deprecated and unlisted from package repositories (such as NuGet, npm, etc.)
+- adherence to <a href="Checklist-for-publishing-a-new-OS-project">internal standards checklist</a></p>
+<h2 id="managing-the-releases-and-keeping-them-in-sync-with-product-development">Managing the releases and keeping them in sync with product development<a class="headerlink" href="#managing-the-releases-and-keeping-them-in-sync-with-product-development" title="Permanent link">#</a></h2>
+<p>The maintainer is responsible for making sure:
+- critical issues get planned and addressed within the standard development process (e.g. bring issues to grooming/sprint planning)
+- any product updates affecting the OS project get reflected (e.g. a new API endpoint should be reflected in SDKs and samples) - see <a href="https://github.com/kontent-ai/.github/wiki/New-REST-API-feature">New REST API feature</a> for more information.
+- versions of the OS project are being released regularly to reflect the needs of customers</p>
+<p>The release process consists of two steps:</p>
+<ol>
+<li>Publishing new version on the package manager (.NET -&gt; Nuget, node/js -&gt; npm, ...)</li>
+<li>Ensuring the proper announcement<ul>
+<li>New feature is described in release changelog</li>
+<li>Decide whether to announce new version in <a href="https://docs.kontent.ai/changelog/product-changelog">product changelog</a>/discord/newsletter</li>
+</ul>
+</li>
+</ol>
+<h2 id="make-your-life-easier">💡 Make your life easier<a class="headerlink" href="#make-your-life-easier" title="Permanent link">#</a></h2>
+<p>Many of the tasks can be automated - e.g. <a href="https://probot.github.io/apps/stale/">stale pull requests can be closed automatically</a>, version management to be automated to a large extent, keeping things in sync with other systems like Jira can be automated. Be smart and automate!</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
