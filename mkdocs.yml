@@ -6,19 +6,11 @@ theme:
     locale: en
     highlightjs: true
     custom_dir: overrides
-    icon:
-      logo: header/kai-logo-symbol-white-rgb
+    logo: kai-logo-symbol-white-rgb.svg
 
 markdown_extensions:
     toc:
         permalink: "#"
-    pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      options:
-        custom_icons:
-          - overrides/.icons
-
 
 site_name: Kontent.ai GitHub docs
 site_url: https://kontent-ai.github.io/wiki/
