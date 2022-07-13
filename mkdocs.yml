@@ -1,5 +1,5 @@
 theme:
-    name: mkdocs
+    name: material
     locale: en
     highlightjs: true
 
