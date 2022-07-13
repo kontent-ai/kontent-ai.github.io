@@ -5,8 +5,11 @@ theme:
 
 markdown_extensions:
     toc:
-        permalink: true
+        permalink: "#"
     admonition: {}
+
+nav:
+  'index.md'
 
 
 site_name: Kontent.ai GitHub docs
