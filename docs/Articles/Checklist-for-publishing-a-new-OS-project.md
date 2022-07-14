@@ -107,7 +107,7 @@ Pro tip: generate custom badges via https://shields.io/ ![Custom Badge](https://
 
 Examples:
 * Continuous Integration
-    * [![Build & Test](https://github.com/kontent-ai/kontent-delivery-sdk-net/actions/workflows/integrate.yml/badge.svg)](https://github.com/kontent-ai/kontent-delivery-sdk-net/actions/workflows/integrate.yml)
+    * [![Build & Test](https://github.com/Kentico/kontent-delivery-sdk-net/actions/workflows/integrate.yml/badge.svg)](https://github.com/Kentico/kontent-delivery-sdk-net/actions/workflows/integrate.yml)
 * Test coverage
     * [Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges) ![Code Climate Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)
 * Static code analysis result
@@ -120,6 +120,8 @@ Examples:
 * Chat
     * [Stack Overflow](https://stackoverflow.com/) [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kontent-ai)
     * [Discord](https://discord.gg/SKCxwPtevJ) [![Discord](https://img.shields.io/discord/821885171984891914?label=Discord&logo=Discord&logoColor=white)](https://discord.gg/SKCxwPtevJ) (![Konten Discord](https://img.shields.io/discord/821885171984891914?color=%237289DA&label=Kontent%20Discord&logo=discord))
+
+> ⚠ Try to unify the style of the badge statuses.
 
 ## Tests
 - _❔ Optional, but highly recommended._
