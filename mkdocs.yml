@@ -8,6 +8,18 @@ theme:
     custom_dir: overrides
     logo: kai-logo-symbol-white-rgb.svg
 
+copyright: Copyright &copy; 2022 Kontent.ai
+
+extra:
+  social:
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/company/kontentai/
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/kontent_ai
+  - icon: fontawesome/brands/facebook
+    link: https://www.facebook.com/Kontentai/
+
+
 markdown_extensions:
     toc:
         permalink: "#"

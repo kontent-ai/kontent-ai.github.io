@@ -1,0 +1,1177 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kontent-ai.github.io/wiki/Articles/Guidelines-for-SDK-developers/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Guidelines for SDK developers - Kontent.ai GitHub docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#expected-functionality" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Kontent.ai GitHub docs" class="md-header__button md-logo" aria-label="Kontent.ai GitHub docs" data-md-component="logo">
+      
+  <img src="../../kai-logo-symbol-white-rgb.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kontent.ai GitHub docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guidelines for SDK developers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Kontent.ai GitHub docs" class="md-nav__button md-logo" aria-label="Kontent.ai GitHub docs" data-md-component="logo">
+      
+  <img src="../../kai-logo-symbol-white-rgb.svg" alt="logo">
+
+    </a>
+    Kontent.ai GitHub docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Articles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Articles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Articles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CI-and-Automation-guidelines/" class="md-nav__link">
+        Continuous Integration and Continuous Delivery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Checklist-for-publishing-a-new-OS-project/" class="md-nav__link">
+        Checklist for publishing a new OS project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-experience-maintenance-process/" class="md-nav__link">
+        Developer experience maintenance process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Duties-of-a-Repository-Maintainer/" class="md-nav__link">
+        Duties of a Repository Maintainer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Guidelines-for-GitHub-permissions-in-Kontent.ai-organization/" class="md-nav__link">
+        Guidelines for GitHub permissions in Kontent.ai organization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Guidelines-for-Kontent.ai-related-tools/" class="md-nav__link">
+        Guidelines for Kontent.ai related tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Guidelines for SDK developers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Guidelines for SDK developers
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#expected-functionality" class="md-nav__link">
+    Expected functionality
+  </a>
+  
+    <nav class="md-nav" aria-label="Expected functionality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-endpoints" class="md-nav__link">
+    Required endpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-support" class="md-nav__link">
+    Feature support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-vs-static-typing" class="md-nav__link">
+    Dynamic vs. static typing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ensuring-backward-compatibility" class="md-nav__link">
+    Ensuring backward compatibility
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returned-data" class="md-nav__link">
+    Returned data
+  </a>
+  
+    <nav class="md-nav" aria-label="Returned data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#object-model-descriptions-of-the-returned-data" class="md-nav__link">
+    Object model descriptions of the returned data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-element-data-types" class="md-nav__link">
+    Content element data types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty-response-vs-404-error" class="md-nav__link">
+    Empty response vs. 404 error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-http-headers" class="md-nav__link">
+    Sending HTTP headers
+  </a>
+  
+    <nav class="md-nav" aria-label="Sending HTTP headers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analytics" class="md-nav__link">
+    Analytics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requesting-latest-content" class="md-nav__link">
+    Requesting latest content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery-api-limits" class="md-nav__link">
+    Delivery API limits
+  </a>
+  
+    <nav class="md-nav" aria-label="Delivery API limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-limitation" class="md-nav__link">
+    Rate limitation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-length" class="md-nav__link">
+    URL length
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    Naming conventions
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming conventions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    Namespaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-name-github-repo-name" class="md-nav__link">
+    Project name (GitHub repo name)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#os-project-requirements" class="md-nav__link">
+    OS project requirements
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Java-GitHub-Actions-Guidelines/" class="md-nav__link">
+        Java GitHub Actions Guidelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JavaScript-Node.js-GitHub-Actions-Guidelines/" class="md-nav__link">
+        JavaScript Node.js GitHub Actions Guidelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kentico%27s-best-practices-for-.csproj-files/" class="md-nav__link">
+        Version management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kontent.ai-best-practices-for-.csproj-files/" class="md-nav__link">
+        Version management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Naming-conventions/" class="md-nav__link">
+        Naming conventions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../New-REST-API-feature/" class="md-nav__link">
+        New REST API feature
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PHP-GitHub-Actions-Guidelines/" class="md-nav__link">
+        PHP GitHub Actions Guidelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-%26-version-management-of-.NET-projects/" class="md-nav__link">
+        Milestones:
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ruby-GitHub-Actions-Guidelines/" class="md-nav__link">
+        Ruby GitHub Actions Guidelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Swift-GitHub-Actions-Guidelines/" class="md-nav__link">
+        Swift GitHub Actions Guidelines
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#expected-functionality" class="md-nav__link">
+    Expected functionality
+  </a>
+  
+    <nav class="md-nav" aria-label="Expected functionality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-endpoints" class="md-nav__link">
+    Required endpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-support" class="md-nav__link">
+    Feature support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-vs-static-typing" class="md-nav__link">
+    Dynamic vs. static typing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ensuring-backward-compatibility" class="md-nav__link">
+    Ensuring backward compatibility
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returned-data" class="md-nav__link">
+    Returned data
+  </a>
+  
+    <nav class="md-nav" aria-label="Returned data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#object-model-descriptions-of-the-returned-data" class="md-nav__link">
+    Object model descriptions of the returned data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-element-data-types" class="md-nav__link">
+    Content element data types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty-response-vs-404-error" class="md-nav__link">
+    Empty response vs. 404 error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-http-headers" class="md-nav__link">
+    Sending HTTP headers
+  </a>
+  
+    <nav class="md-nav" aria-label="Sending HTTP headers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analytics" class="md-nav__link">
+    Analytics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requesting-latest-content" class="md-nav__link">
+    Requesting latest content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery-api-limits" class="md-nav__link">
+    Delivery API limits
+  </a>
+  
+    <nav class="md-nav" aria-label="Delivery API limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-limitation" class="md-nav__link">
+    Rate limitation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-length" class="md-nav__link">
+    URL length
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    Naming conventions
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming conventions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    Namespaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-name-github-repo-name" class="md-nav__link">
+    Project name (GitHub repo name)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#os-project-requirements" class="md-nav__link">
+    OS project requirements
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>Guidelines for SDK developers</h1>
+
+<p>Welcome to the Kontent.ai guidelines for SDK developers! These guidelines cover all the requirements needed to create SDKs for the <a href="https://kontent.ai/learn/reference/delivery-api/">Kontent.ai Delivery API</a> and should give you a solid starting point for developing SDKs in the framework of your choice.</p>
+<p>The guidelines cover the following topics:</p>
+<ul>
+<li><a href="#expected-functionality">Expected SDK functionality</a></li>
+<li><a href="#ensuring-backward-compatibility">Ensuring backward compatibility</a></li>
+<li><a href="#returned-data">Format of the returned data</a></li>
+<li><a href="#sending-http-headers">Sending HTTP headers</a></li>
+<li><a href="#delivery-api-limits">Delivery API limits</a></li>
+<li><a href="#naming-conventions">Naming conventions</a></li>
+<li><a href="#os-project-requirements">OS project requirements</a></li>
+</ul>
+<h2 id="expected-functionality">Expected functionality<a class="headerlink" href="#expected-functionality" title="Permanent link">#</a></h2>
+<h3 id="required-endpoints">Required endpoints<a class="headerlink" href="#required-endpoints" title="Permanent link">#</a></h3>
+<p>The SDK must support the following Delivery API endpoints:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>Retrieve a list of content items <br/> <code>https://deliver.kontent.ai/{project_id}/items</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Retrieve a content item <br/> <code>https://deliver.kontent.ai/{project_id}/items/{item_codename}</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Retrieve a list of content types <br/> <code>https://deliver.kontent.ai/{project_id}/types</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Retrieve a content type <br/> <code>https://deliver.kontent.ai/{project_id}/types/{type_codename}</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Retrieve a content type element <br/> <code>https://deliver.kontent.ai/{project_id}/types/{type_codename}/elements/{element_codename}</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Retrieve a list of taxonomy groups <br/> <code>https://deliver.kontent.ai/{project_id}/taxonomies</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Retrieve a taxonomy group <br/> <code>https://deliver.kontent.ai/{project_id}/taxonomies/{taxonomy_group_codename}</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="feature-support">Feature support<a class="headerlink" href="#feature-support" title="Permanent link">#</a></h3>
+<p>The SDK should also support the following features:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delivery Preview API</td>
+<td>Support for <a href="https://kontent.ai/learn/tutorials/develop-apps/build-strong-foundation/set-up-preview/">previewing unpublished content items</a> via the Delivery Preview API.</td>
+</tr>
+<tr>
+<td>Content filtering</td>
+<td>Support for the <a href="https://kontent.ai/learn/reference/delivery-api/#tag/Filtering-content">filtering parameters</a> when making queries to the Delivery API.</td>
+</tr>
+<tr>
+<td>Localization</td>
+<td>Support for retrieving localized content, that is using the <code>language</code> query parameter when retrieving content items.</td>
+</tr>
+<tr>
+<td>Rendering Rich text elements</td>
+<td>Support for rendering content (in other words, transforming HTML 5 fragments) of the built-in Rich text elements. This content includes links, images, components, and other content items.</td>
+</tr>
+<tr>
+<td>Resolving links</td>
+<td>Support for resolving hypertext links to other content items within the built-in Rich text elements.</td>
+</tr>
+<tr>
+<td>Retrieving linked items</td>
+<td>Support for retrieving content items and components that are used within other content items.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dynamic-vs-static-typing">Dynamic vs. static typing<a class="headerlink" href="#dynamic-vs-static-typing" title="Permanent link">#</a></h3>
+<p>We recommend that you use statically typed models for the SDK, if supported by a given stack. Otherwise, use dynamically typed models if your stack supports only those.</p>
+<p>For information about content elements and their data types, see <a href="#content-element-data-types">Content element data types</a> below.</p>
+<h2 id="ensuring-backward-compatibility">Ensuring backward compatibility<a class="headerlink" href="#ensuring-backward-compatibility" title="Permanent link">#</a></h2>
+<p>The Delivery API evolves in a way that is backward compatible. This means that, as long as SDKs and client applications follow a few rules, changes in the Delivery API won't break them.</p>
+<p>The following changes to the Delivery API are <strong>NOT</strong> considered breaking changes and you should cope with them in your SDK.</p>
+<ul>
+<li>Add a new property to JSON objects.</li>
+<li>Change the order of JSON object properties (with exceptions, see below).</li>
+<li>Add a new type of content element.</li>
+<li>Add a new HTML element to the Rich text elements.</li>
+<li>Add a new attribute to HTML element in the Rich text elements.</li>
+<li>Add a new value to HTML element attribute in the Rich text elements.</li>
+<li>Change the order of HTML element attributes in the Rich text elements.</li>
+<li>Represent some characters as HTML entities.</li>
+</ul>
+<p><strong>Note</strong>: If a breaking change should happen, we will provide a new version of the Delivery API (alongside the current version of the API) together with new SDK guidelines. We will let you know in time before this happens.</p>
+<p>You can always rely on the following features:</p>
+<ul>
+<li>Elements in content types are in the same order as in Kontent.ai UI.</li>
+<li>Elements in content item variants are in the same order as in content types.</li>
+<li>Options in Multiple choice elements in content types are in the same order as in Kontent.ai UI.</li>
+<li>Selected options in Multiple choice elements in content item variants are in the same order as in content types.</li>
+</ul>
+<p>Here are a few tips to help you deal with backward-compatible changes in the Delivery API:</p>
+<ul>
+<li>Ignore unknown content elements.</li>
+<li>Parse HTML with HTML 5 parses. If possible, do not use regular expressions.</li>
+<li>Ignore unknown HTML elements – keep their content, but ignore their opening and closing tags.</li>
+</ul>
+<h2 id="returned-data">Returned data<a class="headerlink" href="#returned-data" title="Permanent link">#</a></h2>
+<p>The Delivery API returns data in the JSON format both for successful and <a href="#errors">unsuccessful</a> requests.</p>
+<h3 id="object-model-descriptions-of-the-returned-data">Object model descriptions of the returned data<a class="headerlink" href="#object-model-descriptions-of-the-returned-data" title="Permanent link">#</a></h3>
+<p>When you query endpoints for retrieving all <code>/items</code>, <code>/types</code>, or <code>/taxonomies</code>, the Delivery API returns a paginated listing response with content that matches your specific query. In each case, the listing response contains a pagination object with information about the number of retrieved items, and a link to the next page of results.</p>
+<p>You can find <a href="https://kontent.ai/learn/reference/delivery-api/#operation/list-content-items">descriptions and examples of the listing responses</a> for content items, content types, and taxonomy groups in our API reference.</p>
+<p>For details on the structure of the individual objects returned by the Delivery API (such as content items, content types, and taxonomy groups), see these pages in the API reference:</p>
+<ul>
+<li><a href="https://kontent.ai/learn/reference/delivery-api/#section/Content-item-object">Content item model</a></li>
+<li><a href="https://kontent.ai/learn/reference/delivery-api/#section/Content-type-object">Content type model</a></li>
+<li><a href="https://kontent.ai/learn/reference/delivery-api/#section/Taxonomy-group-object">Taxonomy group model</a></li>
+</ul>
+<h3 id="content-element-data-types">Content element data types<a class="headerlink" href="#content-element-data-types" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Content element</th>
+<th>Data type</th>
+<th>Limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text</td>
+<td>string</td>
+<td>Hard limit of 100,000 characters.</td>
+</tr>
+<tr>
+<td>Rich text</td>
+<td>string</td>
+<td>Hard limit of 100,000 characters. <strong>Note</strong>: The limit includes HTML markup and whitespace characters.</td>
+</tr>
+<tr>
+<td>Multiple choice</td>
+<td>array of strings (selected options)</td>
+<td>Can contain up to 250 predefined options.</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>decimal</td>
+<td>Numbers have the following format: "##########.##########" – 10 numbers before and after the decimal separator.</td>
+</tr>
+<tr>
+<td>Date &amp; time</td>
+<td>string</td>
+<td><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a> formatted string in the following format: YYYY-MM-DDTHH:MM:SSZ.</td>
+</tr>
+<tr>
+<td>Asset</td>
+<td>asset reference</td>
+<td>The maximum asset size is 2 GB.</td>
+</tr>
+<tr>
+<td>Modular content</td>
+<td>array of strings (codenames of selected content items)</td>
+<td>No limitation.</td>
+</tr>
+<tr>
+<td>URL slug</td>
+<td>string</td>
+<td>Hard limit of 100,000 characters.</td>
+</tr>
+<tr>
+<td>Custom element</td>
+<td>string</td>
+<td>Hard limit of 100,000 characters. <strong>Note</strong>: Custom elements behave as simple text-based elements.</td>
+</tr>
+</tbody>
+</table>
+<p>You can find <a href="https://kontent.ai/learn/reference/delivery-api/#tag/Content-elements">example JSON values for each of the content elements</a> in our API reference.</p>
+<h3 id="empty-response-vs-404-error">Empty response vs. 404 error<a class="headerlink" href="#empty-response-vs-404-error" title="Permanent link">#</a></h3>
+<p>The Delivery API differentiates between a query that doesn't bring any results (and gives a 200 OK response) and a query that gives a 404 Not found response.</p>
+<p>For example, when you request a single item by codename and the item doesn't exist, the Delivery API responds with a 404 Not found. On the other hand, if you request items (with optional filter) and no item (or items matching the filtering criteria) exists, the Delivery API responds with 200 OK and returns an empty array of items. This applies to endpoints such as <code>/items</code>, <code>/types</code>, and <code>/taxonomies</code>.</p>
+<h3 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">#</a></h3>
+<p>The Delivery API returns errors in the JSON format. Every error message has the same format. Here's an example of a general error message:</p>
+<pre><code class="language-json">{
+  &quot;message&quot;: &quot;No HTTP resource was found that matches the request. Please read API documentation at https://kontent.ai/learn/reference/delivery-api.&quot;,
+  &quot;request_id&quot;: &quot;|38a7b46fc8597a4aa1ab0169449cac54.c37263a1_&quot;,
+  &quot;error_code&quot;: 1,
+  &quot;specific_code&quot;: 0
+}
+</code></pre>
+<p>The <code>message</code> property in the error message provides a clear specification of what went wrong when making the request.</p>
+<h2 id="sending-http-headers">Sending HTTP headers<a class="headerlink" href="#sending-http-headers" title="Permanent link">#</a></h2>
+<h3 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">#</a></h3>
+<p>To gauge how much your SDK is used, we strongly recommend that the SDK sends a <code>X-KC-SDKID</code> header with each request to the API. The value of the header should be formatted like this <code>&lt;SDK package origin&gt;;&lt;SDK name&gt;;&lt;SDK version&gt;</code>, for example, <code>nuget.org;Kontent.Delivery;9.0.0</code> for version 9 of the <a href="https://github.com/kontent-ai/delivery-sdk-net">Delivery .NET SDK</a>.</p>
+<p>This way we can identify the requests coming from your SDK and later provide you with information about its usage.</p>
+<h3 id="requesting-latest-content">Requesting latest content<a class="headerlink" href="#requesting-latest-content" title="Permanent link">#</a></h3>
+<p>By default, the Delivery API might serve stale content (if cached by the Fastly CDN) for performance reasons. In some cases, such as when <a href="https://kontent.ai/learn/reference/webhooks-reference/">reacting to webhook notifications</a>, you might want to request the latest content from your Kontent.ai project.</p>
+<p>To do this within your SDK, include a <code>X-KC-Wait-For-Loading-New-Content</code> header and set it to <code>true</code> when sending requests to the API.</p>
+<p>Including the header will cause the Delivery API to explicitly fetch new content from the specified Kontent.ai project.</p>
+<h2 id="delivery-api-limits">Delivery API limits<a class="headerlink" href="#delivery-api-limits" title="Permanent link">#</a></h2>
+<h3 id="rate-limitation">Rate limitation<a class="headerlink" href="#rate-limitation" title="Permanent link">#</a></h3>
+<p>Delivery API requests are primarily served from a CDN network. For such requests, no rate limiting is in place. For uncached requests, a rate limitation of 100 per second and 2000 per minute is enforced. If a limit is reached, server responds with a 429 error and provides a <code>Retry-After</code> header, which tells you how long to wait before a request can be reattempted. All failed requests are safe to retry.</p>
+<h3 id="url-length">URL length<a class="headerlink" href="#url-length" title="Permanent link">#</a></h3>
+<p>The length of URLs for the GET requests is limited to 2048 characters. The Delivery API returns an <a href="#errors">error</a> for URLs longer than 2048 characters.</p>
+<h2 id="naming-conventions">Naming conventions<a class="headerlink" href="#naming-conventions" title="Permanent link">#</a></h2>
+<p>Here are some recommendations on naming conventions for the SDK project name, the namespaces in your project, and package names. Following these recommendations will help others find the SDK more easily.</p>
+<h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">#</a></h3>
+<ul>
+<li>Main namespace: Kontent.ai</li>
+<li>Sub namespace: Name of the API (e.g., Delivery)</li>
+<li>Namespace separator: as per target platform</li>
+<li>Letter case: as per target platform</li>
+</ul>
+<h3 id="project-name-github-repo-name">Project name (GitHub repo name)<a class="headerlink" href="#project-name-github-repo-name" title="Permanent link">#</a></h3>
+<p>We recommend that the project for your SDK uses the following naming pattern: <code>[Main namespace] &lt;Sub Namespace&gt; &lt;Platform&gt; [Paradigm] SDK</code>. For example, for the Delivery .NET SDK, the project name would be <em>Kontent.ai Delivery .NET SDK</em>.</p>
+<h2 id="os-project-requirements">OS project requirements<a class="headerlink" href="#os-project-requirements" title="Permanent link">#</a></h2>
+<p>For your SDK to be included within the list Kontent.ai SDKs, the SDK project has to comply with our checklist for <a href="https://github.com/kontent-ai/.github/wiki/Checklist-for-publishing-a-new-OS-project">Publishing an OS project</a>. You can also read <a href="https://github.com/kontent-ai/.github/wiki/Guidelines-for-Kontent-related-tools">Guidelines for building tools around Kontent.ai APIs</a> that should help you meet the requirements for creating a successful tool.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../Guidelines-for-Kontent.ai-related-tools/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Guidelines for Kontent.ai related tools" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Guidelines for Kontent.ai related tools
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Java-GitHub-Actions-Guidelines/" class="md-footer__link md-footer__link--next" aria-label="Next: Java GitHub Actions Guidelines" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Java GitHub Actions Guidelines
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
