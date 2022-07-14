@@ -4,22 +4,22 @@ Welcome to the Kontent.ai wiki! You can find some useful guidelines here that mi
 
 ## General Guidelines
 
-- [Checklist for publishing a new OS project](Articles/Checklist-for-publishing-a-new-OS-project)
-- [Guidelines for GitHub permissions in Kontent.ai organization](Articles/Guidelines-for-GitHub-permissions-in-Kontent-ai-organization)
-- [Naming conventions](Articles/Naming-conventions)
-- [Guidelines for SDK developers](Articles/Guidelines-for-SDK-developers)
-- [Guidelines for Kontent related tools](Articles/Guidelines-for-Kontent-related-tools)
-- [Duties of a Repository Maintainer](Articles/Duties-of-a-Repository-Maintainer)
-- [New REST API feature](Articles/https://github.com/kontent-ai/.github/wiki/New-REST-API-feature)
-- [CI, Automation, and Specific Stack Guidelines](Articles/CI-and-Automation-Guidelines)
+- [Checklist for publishing a new OS project](./articles/Checklist-for-publishing-a-new-OS-project.md)
+- [Guidelines for GitHub permissions in Kontent.ai organization](./articles/Guidelines-for-GitHub-permissions-in-Kontent-ai-organization.md)
+- [Naming conventions](./articles/Naming-conventions.md)
+- [Guidelines for SDK developers](./articles/Guidelines-for-SDK-developers.md)
+- [Guidelines for Kontent related tools](./articles/Guidelines-for-Kontent-related-tools.md)
+- [Duties of a Repository Maintainer](./articles/Duties-of-a-Repository-Maintainer.md)
+- [New REST API feature](./articles/https://github.com/kontent-ai/.github/wiki/New-REST-API-feature.md)
+- [CI, Automation, and Specific Stack Guidelines](./articles/CI-and-Automation-Guidelines.md)
     - .NET Specific Guidelines
-        - [.NET GitHub Actions Guidelines](Articles/.NET-GitHub-Actions-Guidelines)
-        - [Release & version management of .NET projects](Articles/Release-&-version-management-of-.NET-projects)
-        - [Kontent.ai best practices for .csproj files](Articles/Kontent.ai-best-practices-for-.csproj-files)
-    - [JavaScript & Node.js GitHub Actions Guidelines](Articles/JavaScript-Node.js-GitHub-Actions-Guidelines)
-    - [Java GitHub Actions Guidelines](Articles/Java-GitHub-Actions-Guidelines)
-    - [PHP GitHub Actions Guidelines](Articles/PHP-GitHub-Actions-Guidelines)
-    - [Ruby GitHub Actions Guidelines](Articles/Ruby-GitHub-Actions-Guidelines)
-    - [Swift GitHub Actions Guidelines](Articles/Swift-GitHub-Actions-Guidelines)
+        - [.NET GitHub Actions Guidelines](./articles/.NET-GitHub-Actions-Guidelines.md)
+        - [Release & version management of .NET projects](./articles/Release-&-version-management-of-.NET-projects.md)
+        - [Kontent.ai best practices for .csproj files](./articles/Kontent.ai-best-practices-for-.csproj-files.md)
+    - [JavaScript & Node.js GitHub Actions Guidelines](./articles/JavaScript-Node.js-GitHub-Actions-Guidelines.md)
+    - [Java GitHub Actions Guidelines](./articles/Java-GitHub-Actions-Guidelines.md)
+    - [PHP GitHub Actions Guidelines](./articles/PHP-GitHub-Actions-Guidelines.md)
+    - [Ruby GitHub Actions Guidelines](./articles/Ruby-GitHub-Actions-Guidelines.md)
+    - [Swift GitHub Actions Guidelines](./articles/Swift-GitHub-Actions-Guidelines.md)
 
 ---

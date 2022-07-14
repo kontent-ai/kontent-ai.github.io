@@ -25,7 +25,7 @@ It's essential to decide who's going to be responsible for the repository. Every
 - set the right expectations about the project
 - keep the repository in a good shape
 
-Read more on [the duties of a maintainer](Duties-of-a-Repository-Maintainer).
+Read more on [the duties of a maintainer](./Duties-of-a-Repository-Maintainer.md).
 
 Mark this user into the [CODEOWNERS](https://help.github.com/articles/about-code-owners/) file. See an [example](https://github.com/kontent-ai/KInspector/blob/master/.github/CODEOWNERS).
 
