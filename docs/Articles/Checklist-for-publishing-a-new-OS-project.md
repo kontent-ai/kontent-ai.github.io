@@ -16,7 +16,7 @@ Before you publish any repository under Kontent.ai organization on GitHub, pleas
 
 ## Repository name
 
-Set repository name according to the [Naming conventions](Naming-conventions).
+Set repository name according to the [Naming conventions](./Naming-conventions.md).
 
 ## Dedicate a maintainer
 - _🔒 Required for private repositories too_
@@ -40,7 +40,7 @@ Mark this user into the [CODEOWNERS](https://help.github.com/articles/about-code
 Fill in basic information about the project to make it easy to find it.
 ![Topics](https://i.imgur.com/4lNqMK6.png)
 
-⚠ Tag the repository based on the division according to [Naming conventions](https://github.com/kontent-ai/.github/wiki/Naming-conventions#github-repositories).
+⚠ Tag the repository based on the division according to [Naming conventions](./Naming-conventions.md#github-repositories).
 
 In the case of private repositories, add a "private-repository" tag.
 
@@ -135,7 +135,7 @@ Include at least a basic set of (unit) tests.
 ## Continuous Integration
 - _❔ Optional, but highly recommended._
 
-Setting up CI, makes it easy for contributors to know whether their code works as expected. You can find more info about CI practices in the [separate article](https://github.com/kontent-ai/.github/wiki/CI-and-Automation-Guidelines).
+Setting up CI, makes it easy for contributors to know whether their code works as expected. You can find more info about CI practices in the [separate article](./CI-and-Automation-Guidelines.md).
 
 - Set up a build agent - [GitHub Actions](https://docs.github.com/en/actions)
   - Make it run tests
