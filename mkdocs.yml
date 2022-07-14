@@ -1,18 +1,15 @@
 theme:
-  name: material
-  palette: 
+    name: material
+    palette: 
+      - scheme: default
+        toggle:
+          icon: material/brightness-7 
+          name: Switch to dark mode
 
-    # Palette toggle for light mode
-    - scheme: default
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+      - scheme: slate
+        toggle:
+          icon: material/brightness-4
+          name: Switch to light mode
     locale: en
     highlightjs: true
     custom_dir: overrides
@@ -30,8 +27,7 @@ extra:
     link: https://www.facebook.com/Kontentai/
 
 extra_css:
-  -stylesheets/extra.css
-
+  - stylesheets/extra.css
 markdown_extensions:
     toc:
         permalink: "#"
