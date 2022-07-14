@@ -1,3 +1,5 @@
+# Checklist for publishing a new OS project
+
 Before you publish any repository under Kontent.ai organization on GitHub, please go through this checklist and make sure the repository is up to standards.
 
 * [Repository name](#Repository-name)
@@ -12,11 +14,11 @@ Before you publish any repository under Kontent.ai organization on GitHub, pleas
 * [Add collaborating teams](#add-collaborating-teams)🔒
 * [Define release process](#releases)
 
-# Repository name
+## Repository name
 
-Set repository name according to the [Naming conventions](./Naming-conventions).
+Set repository name according to the [Naming conventions](Naming-conventions).
 
-# Dedicate a maintainer
+## Dedicate a maintainer
 - _🔒 Required for private repositories too_
 
 It's essential to decide who's going to be responsible for the repository. Every repository needs to have an owner (a person or a team) who will actively:
@@ -27,12 +29,12 @@ Read more on [the duties of a maintainer](Duties-of-a-Repository-Maintainer).
 
 Mark this user into the [CODEOWNERS](https://help.github.com/articles/about-code-owners/) file. See an [example](https://github.com/kontent-ai/KInspector/blob/master/.github/CODEOWNERS).
 
-# [Community profile](https://help.github.com/articles/about-community-profiles-for-public-repositories/)
+## [Community profile](https://help.github.com/articles/about-community-profiles-for-public-repositories/)
 - should be "all green"
 - please note that it's available only for public repos and not for forked repos
 ![Green community profile](https://i.imgur.com/DVRjA41.png)
 
-## Description, website, and topics
+### Description, website, and topics
 - _🔒 Required for private repositories too_
 
 Fill in basic information about the project to make it easy to find it.
@@ -42,7 +44,7 @@ Fill in basic information about the project to make it easy to find it.
 
 In the case of private repositories, add a "private-repository" tag.
 
-## README (Documentation)
+### README (Documentation)
 - _🔒 Required for private repositories too_
 
 README should contain:
@@ -55,7 +57,7 @@ More complex topics and examples can be covered in separate articles in GitHub W
 
 > The template of the README file is stored in [repo-template](https://github.com/kontent-ai/repo-template).
 
-## Contributing
+### Contributing
 From the README or CONTRIBUTING files, it should be clear:
 
 - how to set up the project in order to contribute
@@ -66,7 +68,7 @@ From the README or CONTRIBUTING files, it should be clear:
 
 > The template of CONTRIBUTING file is stored in [repo-template](https://github.com/kontent-ai/repo-template).
 
-## License
+### License
 
 Use the MIT license and set "Kontent.ai" as the copyright holder. If you want to use a different license, please contact the [DevRel team](mailto:devrel@kontent.ai).
 
@@ -74,17 +76,17 @@ Store the license in the "LICENSE.md" file in the root of the repository because
 
 > The template of the LICENSE file is stored in [repo-template](https://github.com/kontent-ai/repo-template).
 
-## Issue & pull request templates & Code of Conduct
+### Issue & pull request templates & Code of Conduct
 
 Use [repo-template](https://github.com/kontent-ai/repo-template) for the templates and Code of Conduct.
 
-# GitHub features
+## GitHub features
 - _🔒 Required for private repositories too_
 Decide which features you turn on or off. This will help set expectations.
 
 ![GH Features](https://i.imgur.com/i6PICQv.png)
 
-# Expectations
+## Expectations
 - _🔒 Required for private repositories too_
 
 You should make clear:
@@ -98,7 +100,7 @@ In case of private repos, please add the following note to the top of the README
 
 Set up an issue tracker. Most likely, you'll use GitHub issues. Take your time to set up labels and milestones.
 
-# Badges
+## Badges
 Use badges to make it easy to find basic information about the status of the project.
 
 Pro tip: generate custom badges via https://shields.io/ ![Custom Badge](https://img.shields.io/badge/hellow-world-yellowgreen.svg?style=popout&logo=github)
@@ -119,15 +121,15 @@ Examples:
     * [Stack Overflow](https://stackoverflow.com/) [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kontent-ai)
     * [Discord](https://discord.gg/SKCxwPtevJ) [![Discord](https://img.shields.io/discord/821885171984891914?label=Discord&logo=Discord&logoColor=white)](https://discord.gg/SKCxwPtevJ) (![Konten Discord](https://img.shields.io/discord/821885171984891914?color=%237289DA&label=Kontent%20Discord&logo=discord))
 
-# Tests
+## Tests
 - _❔ Optional, but highly recommended._
 
 Include at least a basic set of (unit) tests.
 
-# Review
+## Review
 - Ask your colleagues to do a code review, basic testing, and proofreading before you publish any project. The [DevRel team](mailto:devrel@kontent.ai) may also help.
 
-# Continuous Integration
+## Continuous Integration
 - _❔ Optional, but highly recommended._
 
 Setting up CI, makes it easy for contributors to know whether their code works as expected. You can find more info about CI practices in the [separate article](https://github.com/kontent-ai/.github/wiki/CI-and-Automation-Guidelines).
@@ -137,20 +139,20 @@ Setting up CI, makes it easy for contributors to know whether their code works a
   - Fail builds on failed tests
 - Set up [status checks](https://docs.github.com/en/github/administering-a-repository/about-protected-branches#require-status-checks-before-merging) via webhooks
 
-# Protect the master branch
+## Protect the master branch
 You can learn more about branch protection in the [documentation](https://docs.github.com/en/github/administering-a-repository/managing-a-branch-protection-rule#about-branch-protection-rules).
 ![Branch protection](https://i.imgur.com/B4LVfUu.png)
 
-# Add collaborating teams
+## Add collaborating teams
 - _🔒 Required for private repositories too_
 ![Collaborators](https://i.imgur.com/0qkbWe1.png)
 >In most cases, it'll be `Admin` permission for the Developer Relations team and `Write` permission for the Employees team.
 
-# Releases
+## Releases
 - Create an initial release
 - **Always** follow [Semantic Versioning](http://semver.org/)
 
-# Want to make the repo even more friendly?
+## Want to make the repo even more friendly?
 - Read the [Pre-launch checklist](https://opensource.guide/starting-a-project/#your-pre-launch-checklist).
 
 
