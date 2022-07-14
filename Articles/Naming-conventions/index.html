@@ -376,20 +376,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../Kentico%27s-best-practices-for-.csproj-files/" class="md-nav__link">
-        Version management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Kontent.ai-best-practices-for-.csproj-files/" class="md-nav__link">
         Version management
       </a>
@@ -629,37 +615,31 @@
 <h2 id="github-repositories">GitHub Repositories<a class="headerlink" href="#github-repositories" title="Permanent link">#</a></h2>
 <ul>
 <li>Repository name:</li>
-<li><code>kontent-ai-&lt;project-name&gt;</code> for <a href="http://kontent.ai/">Kontent.ai</a> projects under the <a href="https://github.com/kontent-ai/">Kontent.ai Github organization</a><ul>
-<li>If the repository has any requirements for name, at least provide <code>kontent-ai</code> somewhere in the repository name (i.e. <code>sourcebit-source-kontent-ai</code>)</li>
-</ul>
-</li>
-<li><code>kontent-ai-&lt;project-name&gt;</code> for any externally maintained Kontent.ai projects outside the Kontent.ai Github organization</li>
+<li>projects under the <a href="https://github.com/kontent-ai/">Kontent.ai Github organization</a> don't need any further mention of the product in their name</li>
+<li>If a Kontent.ai related repository is managed in an external organization, use pattern <code>kontent-ai-&lt;project-name&gt;</code> or at least provide <code>kontent-ai</code> somewhere in the repository name (i.e. <code>sourcebit-source-kontent-ai</code>)</li>
+<li><code>kontent-ai-&lt;project-name&gt;</code> or preferably</li>
 <li><code>&lt;project-name&gt;</code> guidelines:</li>
 <li>Use a broad-to-specific convention to keep similar projects grouped together<ul>
-<li>e.g. kontent-ai-delivery-sdk-js + kontent-ai-delivery-sdk-net</li>
-</ul>
-</li>
-<li>If a particular project is a plugin/module/etc. for an existing technology with specific naming conventions, use those <ul>
-<li>e.g. gatsby-source-kontent-ai or gridsome-source-kontent-ai</li>
+<li>e.g. delivery-sdk-js + delivery-sdk-net</li>
 </ul>
 </li>
 <li>Tagging</li>
-<li>Tag with the <code>kontent-ai</code></li>
+<li>Tag with the <code>kontent-ai</code> tag</li>
 <li>Use any other appropriate tags for the repo. (e.g. gatsby, gatsbyjs, source-plugin, etc.)</li>
 </ul>
 <h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">#</a></h2>
 <h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">#</a></h3>
 <p>We stick to <a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/names-of-namespaces">Microsoft's conventions</a> <code>&lt;Company&gt;.(&lt;Product&gt;|&lt;Technology&gt;)[.&lt;Feature&gt;][.&lt;Subnamespace&gt;]</code>. Some examples:</p>
 <ul>
-<li><code>Kontent.ai.*</code> for Kontent.ai projects under the <a href="https://github.com/kontent-ai/">Kontent.ai Github organization</a></li>
-<li><code>&lt;YourCompany&gt;.Kontent.ai.*</code> for any externally maintained Kontent.ai projects </li>
-<li><code>Kontent.ai.&lt;Technology&gt;*</code> for non-product related code. Eg. <code>Kontent.ai.AspNetCore.Http</code> if the code is related to <code>Microsoft.AspNetCore.Http</code>.</li>
+<li><code>Kontent.Ai.*</code> for Kontent.ai projects under the <a href="https://github.com/kontent-ai/">Kontent.ai Github organization</a></li>
+<li><code>&lt;YourCompany&gt;.Kontent.Ai.*</code> for any externally maintained Kontent.ai projects </li>
+<li><code>Kontent.Ai.&lt;Technology&gt;*</code> for non-product related code. Eg. <code>Kontent.Ai.AspNetCore.Http</code> if the code is related to <code>Microsoft.AspNetCore.Http</code>.</li>
 </ul>
 <h3 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">#</a></h3>
 <ul>
 <li>The name of the package should reflect the repo name</li>
 <li>When it makes sense use organization prefixes</li>
-<li>e.g. @kontent-ai/kontent-ai-deliver-sdk-js</li>
+<li>e.g. @kontent-ai/deliver-sdk-js</li>
 <li>For projects under the <a href="https://github.com/kontent-ai/">Kontent.ai Github organization</a> ONLY:</li>
 <li>Use appropriate icons from https://github.com/kontent-ai/.github/tree/master/images</li>
 </ul>
