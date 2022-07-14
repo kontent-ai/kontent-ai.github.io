@@ -101,6 +101,7 @@ In case of private repos, please add the following note to the top of the README
 Set up an issue tracker. Most likely, you'll use GitHub issues. Take your time to set up labels and milestones.
 
 ## Badges
+
 Use badges to make it easy to find basic information about the status of the project.
 
 Pro tip: generate custom badges via https://shields.io/ ![Custom Badge](https://img.shields.io/badge/hellow-world-yellowgreen.svg?style=popout&logo=github)
@@ -121,7 +122,7 @@ Examples:
     * [Stack Overflow](https://stackoverflow.com/) [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kontent-ai)
     * [Discord](https://discord.gg/SKCxwPtevJ) [![Discord](https://img.shields.io/discord/821885171984891914?label=Discord&logo=Discord&logoColor=white)](https://discord.gg/SKCxwPtevJ) (![Konten Discord](https://img.shields.io/discord/821885171984891914?color=%237289DA&label=Kontent%20Discord&logo=discord))
 
-> ⚠ Try to unify the style of the badge statuses.
+> ⚠ Try to unify the style of the badge statuses. If it is not possible group the stypes per line.
 
 ## Tests
 - _❔ Optional, but highly recommended._
