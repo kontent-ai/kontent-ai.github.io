@@ -4,7 +4,7 @@ Welcome to the Kontent.ai wiki! You can find some useful guidelines here that mi
 
 ## General Guidelines
 
-- [Checklist for publishing a new OS project](Articles/Articles/Checklist-for-publishing-a-new-OS-project)
+- [Checklist for publishing a new OS project](Articles/Checklist-for-publishing-a-new-OS-project)
 - [Guidelines for GitHub permissions in Kontent.ai organization](Articles/Guidelines-for-GitHub-permissions-in-Kontent-ai-organization)
 - [Naming conventions](Articles/Naming-conventions)
 - [Guidelines for SDK developers](Articles/Guidelines-for-SDK-developers)
