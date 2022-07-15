@@ -12,7 +12,7 @@ Below are links to various places you can find the Kontent.ai developer communit
 
 - [Kontent.ai MVPs](https://kontent.ai/mvp-program) - List of all Kontent.ai MVPs
 
-- [Kontent on StackOverflow](https://stackoverflow.com/tags/kontent-ai) - Kontent.ai questions on Stack Overflow
+- [Kontent.ai on StackOverflow](https://stackoverflow.com/tags/kontent-ai) - Kontent.ai questions on Stack Overflow
 
 - [Kontent.ai ideas and roadmap](https://feedback.kontent.ai/roadmap)
 
@@ -21,7 +21,7 @@ Below are links to various places you can find the Kontent.ai developer communit
 #### Kontent.ai on Twitter
 
 
-- [Kontent by Kentico](https://twitter.com/Kontent_ai) - Kontent.ai Twitter
+- [Kontent.ai's Twitter](https://twitter.com/Kontent_ai) - 
 
 - [Ondřej Chrastina](https://twitter.com/ChrastinaOndrej) - DevRel Leader at Kontent.ai
 
@@ -46,11 +46,11 @@ Below are links to various places you can find the Kontent.ai developer communit
 
 ### Kontent.ai MVPs
 
-[Full list of Kontent MVPs](https://kontent.ai/mvp-program)
+[Full list of Kontent.ai MVPs](https://kontent.ai/mvp-program)
 
 ## Kontent.ai Blogs
 
-- [Kontent Blog](https://kontent.ai/blog)
+- [Kontent.ai Blog](https://kontent.ai/blog)
 
 - [Kontent.ai Blog on Dev.to](https://dev.to/kontent_ai)
 
@@ -80,11 +80,11 @@ Below are links to various places you can find the Kontent.ai developer communit
 
 - [Kontent.ai on NuGet](https://www.nuget.org/packages?q=Kontent.ai)
 
-- [Kontent on Npm](https://www.npmjs.com/search?q=@kontent-ai)
+- [Kontent.ai on Npm](https://www.npmjs.com/search?q=@kontent-ai)
 
-### Kontent Libraries
+### Kontent.ai Libraries
 
-- [Kontent Repositories on GitHub](https://github.com/Kentico?utf8=%E2%9C%93&q=kontent&type=&language=)
+- [Kontent.ai Repositories on GitHub](https://github.com/Kentico?utf8=%E2%9C%93&q=kontent&type=&language=)
   - Delivery SDK
     - [.NET](https://github.com/Kentico/kontent-delivery-sdk-net)
     - [Javascript](https://github.com/kontent-ai/delivery-sdk-js)    
