@@ -9,7 +9,7 @@ Welcome to the Kontent.ai wiki! You can find some useful guidelines here that mi
 - [Guidelines for GitHub permissions in Kontent.ai organization](./articles/Guidelines-for-GitHub-permissions-in-Kontent-ai-organization.md)
 - [Naming conventions](./articles/Naming-conventions.md)
 - [Guidelines for SDK developers](./articles/Guidelines-for-SDK-developers.md)
-- [Guidelines for Kontent related tools](./articles/Guidelines-for-Kontent-related-tools.md)
+- [Guidelines for Kontent.ai related tools](./articles/Guidelines-for-Kontent-ai-related-tools.md)
 - [Duties of a Repository Maintainer](./articles/Duties-of-a-Repository-Maintainer.md)
 - [New REST API feature](./articles/https://github.com/kontent-ai/.github/wiki/New-REST-API-feature.md)
 - [CI, Automation, and Specific Stack Guidelines](./articles/CI-and-Automation-Guidelines.md)
