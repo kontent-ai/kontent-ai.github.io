@@ -23,4 +23,4 @@ We stick to [Microsoft's conventions](https://docs.microsoft.com/en-us/dotnet/st
 
 * Package names should omit mentions of the technology stack, assuming it can be derived from the package manager (for example `@kontent-ai/delivery-sdk-js` package hosted on npm should lose the `-js` suffix)
 * When it makes sense, use organization prefixes (e.g. @kontent-ai/deliver-sdk-js)
-* For projects under the [Kontent.ai Github organization](https://github.com/kontent-ai/) ONLY: Use appropriate icons from [https://github.com/kontent-ai/.github/logos](https://github.com/kontent-ai/.github/logos)
+* For projects under the [Kontent.ai Github organization](https://github.com/kontent-ai/) ONLY: Use appropriate icons from [https://github.com/kontent-ai/.github/tree/main/logos](https://github.com/kontent-ai/.github/tree/main/logos)
