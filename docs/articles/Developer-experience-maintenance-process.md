@@ -1,7 +1,5 @@
 # Developer experience maintenance process
 
-**Draft**
-
 This document describes the process of [repositories maintained by @kontent-ai/developer-experience team](https://github.com/search?q=org%3AKentico+%22%40Kentico%2Fdeveloper-experience%22&type=code).
 
 Some team members have a dedicated **"maintenance day"** in their workload for handling basic operative work and issue triage. These primary contacts are mentioned explicitly in the `CODEOWNERS` file. This group of people is called "DevEx OS maintainers". 
