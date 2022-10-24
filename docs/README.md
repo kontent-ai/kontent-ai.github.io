@@ -1,4 +1,4 @@
-Welcome to the Kontent.ai wiki! You can find some useful guidelines here that might help you get your OS project right.
+Welcome to the Kontent.ai GitHub Developer resources! You can find some useful guidelines here that might help you get your OS project right.
 
 ---
 
