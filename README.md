@@ -1,3 +1,3 @@
-# Kontent.ai GitHub wiki pages
+# Kontent.ai GitHub developer resources
 
-This is a source of Kontent.ai GitHub wiki. Check ou the [Docs](./docs) section for more information.
+This is a source of Kontent.ai GitHub developer resources. Check out the [Docs](./docs) section for more information.

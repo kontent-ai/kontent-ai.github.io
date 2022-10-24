@@ -1,10 +1,10 @@
-Welcome to the Kontent.ai wiki! You can find some useful guidelines here that might help you get your OS project right.
+Welcome to the Kontent.ai GitHub Developer resources! You can find some useful guidelines here that might help you get your OS project right.
 
 ---
 
 ## General Guidelines
 
-- [Developer Reources](./articles/Developer-Resources.md)
+- [Developer Resources](./articles/Developer-Resources.md)
 - [Checklist for publishing a new OS project](./articles/Checklist-for-publishing-a-new-OS-project.md)
 - [Guidelines for GitHub permissions in Kontent.ai organization](./articles/Guidelines-for-GitHub-permissions-in-Kontent-ai-organization.md)
 - [Naming conventions](./articles/Naming-conventions.md)
