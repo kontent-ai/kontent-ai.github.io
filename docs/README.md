@@ -10,6 +10,7 @@ Welcome to the Kontent.ai GitHub Developer resources! You can find some useful g
 - [Naming conventions](./articles/Naming-conventions.md)
 - [Guidelines for SDK developers](./articles/Guidelines-for-SDK-developers.md)
 - [Guidelines for Kontent.ai related tools](./articles/Guidelines-for-Kontent.ai-related-tools.md)
+- [Guidelines for JS libraries](./articles/Guidelines-for-js-libraries.md)
 - [Duties of a Repository Maintainer](./articles/Duties-of-a-Repository-Maintainer.md)
 - [New REST API feature](./articles/https://github.com/kontent-ai/.github/wiki/New-REST-API-feature.md)
 - [CI, Automation, and Specific Stack Guidelines](./articles/CI-and-Automation-Guidelines.md)
