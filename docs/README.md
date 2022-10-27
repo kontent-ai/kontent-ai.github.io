@@ -17,7 +17,9 @@ Welcome to the Kontent.ai GitHub Developer resources! You can find some useful g
         - [.NET GitHub Actions Guidelines](./articles/.NET-GitHub-Actions-Guidelines.md)
         - [Release & version management of .NET projects](./articles/Release-&-version-management-of-.NET-projects.md)
         - [Kontent.ai best practices for .csproj files](./articles/Kontent.ai-best-practices-for-.csproj-files.md)
-    - [JavaScript & Node.js GitHub Actions Guidelines](./articles/JavaScript-Node.js-GitHub-Actions-Guidelines.md)
+    - JS Specific Guidelines
+        - [Guidelines for JS libraries](./articles/Guidelines-for-js-libraries.md)
+        - [JavaScript & Node.js GitHub Actions Guidelines](./articles/JavaScript-Node.js-GitHub-Actions-Guidelines.md)
     - [Java GitHub Actions Guidelines](./articles/Java-GitHub-Actions-Guidelines.md)
     - [PHP GitHub Actions Guidelines](./articles/PHP-GitHub-Actions-Guidelines.md)
     - [Ruby GitHub Actions Guidelines](./articles/Ruby-GitHub-Actions-Guidelines.md)
