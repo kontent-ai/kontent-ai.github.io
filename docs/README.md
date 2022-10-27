@@ -19,7 +19,7 @@ Welcome to the Kontent.ai GitHub Developer resources! You can find some useful g
         - [Kontent.ai best practices for .csproj files](./articles/Kontent.ai-best-practices-for-.csproj-files.md)
     - JS Specific Guidelines
         - [Guidelines for JS libraries](./articles/Guidelines-for-js-libraries.md)
-    - [JavaScript & Node.js GitHub Actions Guidelines](./articles/JavaScript-Node.js-GitHub-Actions-Guidelines.md)
+        - [JavaScript & Node.js GitHub Actions Guidelines](./articles/JavaScript-Node.js-GitHub-Actions-Guidelines.md)
     - [Java GitHub Actions Guidelines](./articles/Java-GitHub-Actions-Guidelines.md)
     - [PHP GitHub Actions Guidelines](./articles/PHP-GitHub-Actions-Guidelines.md)
     - [Ruby GitHub Actions Guidelines](./articles/Ruby-GitHub-Actions-Guidelines.md)
