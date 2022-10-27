@@ -28,3 +28,11 @@ jobs:
     - run: npm ci
     - run: npm run test:all
 ```
+
+## Publish to npm with GitHub release
+
+If you want to publish your package to npm, the best way it to have an action trigger when you create a GitHub release. The published package version should be taken from the release's version (tag) and the version should be commited back into the `package.json` by the action. You can find an example of such an action [here](https://github.com/kontent-ai/react-components/blob/main/.github/workflows/release.yml).
+
+> **Warning**
+> 
+> During the release-triggered action the checked-out ref is the tag of the release. To be able to commit, you will need to explicitly specify to what branch you want to commit or check out the branch.
