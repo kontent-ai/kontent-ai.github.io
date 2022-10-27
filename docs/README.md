@@ -10,7 +10,6 @@ Welcome to the Kontent.ai GitHub Developer resources! You can find some useful g
 - [Naming conventions](./articles/Naming-conventions.md)
 - [Guidelines for SDK developers](./articles/Guidelines-for-SDK-developers.md)
 - [Guidelines for Kontent.ai related tools](./articles/Guidelines-for-Kontent.ai-related-tools.md)
-- [Guidelines for JS libraries](./articles/Guidelines-for-js-libraries.md)
 - [Duties of a Repository Maintainer](./articles/Duties-of-a-Repository-Maintainer.md)
 - [New REST API feature](./articles/https://github.com/kontent-ai/.github/wiki/New-REST-API-feature.md)
 - [CI, Automation, and Specific Stack Guidelines](./articles/CI-and-Automation-Guidelines.md)
@@ -18,6 +17,8 @@ Welcome to the Kontent.ai GitHub Developer resources! You can find some useful g
         - [.NET GitHub Actions Guidelines](./articles/.NET-GitHub-Actions-Guidelines.md)
         - [Release & version management of .NET projects](./articles/Release-&-version-management-of-.NET-projects.md)
         - [Kontent.ai best practices for .csproj files](./articles/Kontent.ai-best-practices-for-.csproj-files.md)
+    - JS Specific Guidelines
+        - [Guidelines for JS libraries](./articles/Guidelines-for-js-libraries.md)
     - [JavaScript & Node.js GitHub Actions Guidelines](./articles/JavaScript-Node.js-GitHub-Actions-Guidelines.md)
     - [Java GitHub Actions Guidelines](./articles/Java-GitHub-Actions-Guidelines.md)
     - [PHP GitHub Actions Guidelines](./articles/PHP-GitHub-Actions-Guidelines.md)
