@@ -10,7 +10,10 @@ List of all available integration examples can be found through the **kontent-ai
 <a href="https://github.com/topics/kontent-ai-integration" target="_blank"><image src="https://img.shields.io/static/v1?label=&message=example integrations&color=3dcca8&style=for-the-badge" alt="Kontent.ai example integrations" width="200"/></a>
 </p>
 
-While working with the linked repositories, we kindly ask everybody to follow the following rules:
+
+## Way of working
+
+While working with the linked repositories, we kindly ask everybody to follow the **following rules:**
 
 1) **Any URLs provided in the repos are not meant be used in production.** You should follow the steps provided in the integration's repository to deploy it yourself for testing, or use in production.
 
@@ -22,25 +25,8 @@ While working with the linked repositories, we kindly ask everybody to follow th
 
 5) Some of the integrations may contain a form of a **server/backend part** as well (_using Netlify functions, Azure functions, or Amazon Lambda functions_). In that case, the setup process will require deploying and configuring these services as well for the element to work. This should be always mentioned and described in the repository documentation as well.
 
-6) Feel free to share your created Kontent.ai integration with other developers. This can be easily done by marking your public github repository with **kontent-ai-integration** topic. 
+## Contributing
 
-7) When creating a new integration, feel free to use our [Template Repository for React](https://github.com/kontent-ai/integration-template-react) that will make it easier to set everything up. 
+Feel free to share your created Kontent.ai integration with other developers. This can be easily done by marking your public github repository with **kontent-ai-integration** topic. 
 
-<br />
-
-## Custom Elements
-A Custom element is essentially a small HTML application that exists in a sandboxed `<iframe>` and interacts with [Kontent.ai](https://kontent.ai/) via the [Custom Elements API](https://kontent.ai/learn/reference/custom-elements-js-api). Their main purpose is to extend the content editing experience of your editors. 
-
-Read [our dedicated tutorial](./New-Custom-Element.md) on how to create a custom element for Kontent.ai.
-
-Also, have a look at the general overview of [deploying custom elements to Kontent.ai](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions).
-
-### Styling your custom elements
-
-By including default styles from Kontent.ai, you can make your custom element look more like rest of the Kontent.ai Application UI.
-
-The following [folder](https://github.com/kontent-ai/integration-template-react/tree/main/public) in our [**Integration Template repository**](https://github.com/kontent-ai/integration-template-react) contains all required files:
-
-* [kontent-ai-app-styles.css](https://github.com/kontent-ai/integration-template-react/blob/main/public/kontent-ai-app-styles.css) – a CSS stylesheet
-* [kontent-ai-icons-v3.0.1.woff2](https://github.com/kontent-ai/integration-template-react/blob/main/public/kontent-ai-icons-v3.0.1.woff2) – a font file
-* [examples.html](https://github.com/kontent-ai/integration-template-react/blob/main/public/examples.html) – An HTML page containing the implementation details and an HTML markup of some of the basic elements. See also the link in Demo section.
+When creating a new integration, feel free to use our [Template Repository for React](https://github.com/kontent-ai/custom-element-template-react) that will make it easier to set everything up. 
