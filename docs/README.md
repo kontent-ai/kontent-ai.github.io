@@ -24,5 +24,6 @@ Welcome to the Kontent.ai GitHub Developer resources! You can find some useful g
     - [PHP GitHub Actions Guidelines](./articles/PHP-GitHub-Actions-Guidelines.md)
     - [Ruby GitHub Actions Guidelines](./articles/Ruby-GitHub-Actions-Guidelines.md)
     - [Swift GitHub Actions Guidelines](./articles/Swift-GitHub-Actions-Guidelines.md)
-
+- [Integrations at Kontent.ai](./articles/Integrations.md)
+    - [Custom Elements](./articles/Custom-elements.md)
 ---
