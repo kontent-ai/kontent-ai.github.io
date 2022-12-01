@@ -19,7 +19,7 @@ While working with the linked repositories, we kindly ask everybody to follow th
 
 2) If an integration is **missing deploy instructions**, or you're having trouble with setting it up, please **create an issue** in the integration's repository.
 
-3) If you wish to **use any premade integration in a production project**, you should perform a **code review and fork/deploy the source code on your own** as integrations are subject to change without any notice. It is also always a good idea to inspect a code you are planning to use seriously, especially if it connects to a 3rd party services, and/or requires some kind of special authorization (api keys, etc.)
+3) If you wish to **use any premade integration in a production project**, you should perform a **code review and fork/deploy the source code on your own** as integrations are subject to change without any notice. It is also always a good idea to inspect a code you are planning to use seriously, especially if it connects to a 3rd party service, and/or requires some kind of special authorization (API keys, etc.)
 
 4) Some of the integrations may require further configuration such as custom API keys, or be subject to CORS limitation. In those cases, you will need to fork the source repository and adjust the configuration in your copy repository according to instructions in the element's README file.
 
