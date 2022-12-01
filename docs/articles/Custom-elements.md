@@ -4,7 +4,6 @@ A Custom element is essentially a small HTML application that exists in a sandbo
 Have a look at the general overview of [deploying custom elements to Kontent.ai](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions).
 
 
-
 Check out our [**Integration Template repository**](https://github.com/kontent-ai/custom-element-template-react) to jumpstart your Custom Element creation.
 
 ## Styling your custom elements
