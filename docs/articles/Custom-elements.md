@@ -11,4 +11,4 @@ Check out our [**Custom element Template repository**](https://github.com/konten
 
 By including [custom element styles](../examples/custom-element-sample-css/styles.css) and [icons](../examples/custom-element-sample-css/kontent-ai-icons-v3.0.1.woff2), you can make your custom element look more like rest of the Kontent.ai Application UI.
 
-Feel free to check out the provided styles [in action](https://kontent-ai.github.io/examples/custom-element-sample-css/). 
+Feel free to check out the [design of the provided styles](https://kontent-ai.github.io/examples/custom-element-sample-css/). 
