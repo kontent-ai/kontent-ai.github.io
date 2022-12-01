@@ -1,7 +1,6 @@
 # Custom Elements in Kontent.ai
 A Custom element is essentially a small HTML application that exists in a sandboxed `<iframe>` and interacts with [Kontent.ai](https://kontent.ai/) via the [Custom Elements API](https://kontent.ai/learn/reference/custom-elements-js-api). Their main purpose is to extend the content editing experience of your editors. 
 
-Read [our dedicated tutorial](./New-Custom-Element.md) on how to create a custom element for Kontent.ai.
 Also, have a look at the general overview of [deploying custom elements to Kontent.ai](https://kontent.ai/learn/tutorials/develop-apps/integrate/content-editing-extensions).
 
 
