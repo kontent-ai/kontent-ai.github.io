@@ -1,13 +1,25 @@
 ## GitHub Repositories
 
 ### Repository name:
+
 * projects under the [Kontent.ai Github organization](https://github.com/kontent-ai/) don't need any further mention of the product in their name
 * If a Kontent.ai related repository is managed in an external organization, use pattern `kontent-ai-<project-name>` or at least provide `kontent-ai` somewhere in the repository name (i.e. `sourcebit-source-kontent-ai`)
+
 ### `<project-name>` guidelines:
+
 * Use a broad-to-specific convention to keep similar projects grouped together (e.g. delivery-sdk-js + delivery-sdk-net)
+
 ### Tagging
-  * Tag with `kontent-ai`
-  * Use any other appropriate tags for the repo. (e.g. gatsby, gatsbyjs, source-plugin, etc.)
+
+If you want to, you can mark your repository by specific [GitHub topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics). This ensures, you get to the topic listing and your repository vill be much more accessible. 
+
+> Feel free to use multiple topics.
+> Use any other appropriate tags for the repo. (e.g. cli, dotnet, plugin, etc.)
+
+* [kontent-ai](https://github.com/topics/kontent-ai) - General topic used in all repositories related to Kontent.ai.
+    * [kontent-ai-integration](https://github.com/topics/kontent-ai-integration) - Repository helps to integrate with other services (see [Integrations info](./Integrations.md) for more).
+    * [kontent-ai-tool](https://github.com/topics/kontent-ai-tool) Repository helps with the tooling around Kontent.ai (SDKs, CLIs, Generators, Mini apps using API etc.).
+    * [kontent-ai-sample](https://github.com/topics/kontent-ai-tool) Repository is showcasing the usage of Kontent.ai.
 
 ## Code
 
