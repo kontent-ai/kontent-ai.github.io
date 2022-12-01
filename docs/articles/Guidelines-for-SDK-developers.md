@@ -156,7 +156,7 @@ The length of URLs for the GET requests is limited to 2048 characters. The Deliv
 
 ## Naming conventions
 
-> Check also the [official naming conventions for Kontent.ai GitHub](./Naming-conventions.html#tagging)
+> Check also the [official naming conventions for Kontent.ai GitHub](./Naming-conventions.md#tagging).
 
 Here are some recommendations on naming conventions for the SDK project name, the namespaces in your project, and package names. Following these recommendations will help others find the SDK more easily.
 
