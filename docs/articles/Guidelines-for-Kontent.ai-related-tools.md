@@ -16,7 +16,7 @@ If you follow this recommendation, we can provide you with aggregated analytic d
 
 ## Naming convension
 
-You can also use the [official Naming Conventions by Kontent.ai if you want](./Naming-conventions.md#tagging)
+You can also use the [official Naming Conventions by Kontent.ai](./Naming-conventions.md#tagging).
 
 ---
 
