@@ -14,6 +14,10 @@ To be able to better measure the adoption of your project, the tool should inclu
 
 If you follow this recommendation, we can provide you with aggregated analytic data about your tool's usage later on.
 
+## Naming convension
+
+You can also use the [official Naming Conventions by Kontent.ai if you want(./Naming-conventions.md#tagging)
+
 ---
 
 If you have any additional questions or comments, you can contact us directly at devrel@kontent.ai.
