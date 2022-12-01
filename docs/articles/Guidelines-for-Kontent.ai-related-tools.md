@@ -14,17 +14,6 @@ To be able to better measure the adoption of your project, the tool should inclu
 
 If you follow this recommendation, we can provide you with aggregated analytic data about your tool's usage later on.
 
-## Topics
-
-If you want to, you can mark your repository by specific [GitHub topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics). This ensures, you get to the topic listing and your repository vill be much more accessible. 
-
-> Feel free to use multiple topics.
-
-* [kontent-ai](https://github.com/topics/kontent-ai) - General topic used in all repositories related to Kontent.ai.
-    * [kontent-ai-integration](https://github.com/topics/kontent-ai-integration) - Repository helps to integrate with other services (see [Integrations info](./Integrations.md) for more).
-    * [kontent-ai-tool](https://github.com/topics/kontent-ai-tool) Repository helps with the tooling around Kontent.ai (SDKs, CLIs, Generators, Mini apps using API etc.).
-    * [kontent-ai-sample](https://github.com/topics/kontent-ai-tool) Repository is showcasing the usage of Kontent.ai.
-
 ---
 
 If you have any additional questions or comments, you can contact us directly at devrel@kontent.ai.
