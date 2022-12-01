@@ -23,6 +23,7 @@ If you want to, you can mark your repository by specific [GitHub topics](https:/
 * [kontent-ai](https://github.com/topics/kontent-ai) - General topic used in all repositories related to Kontent.ai.
     * [kontent-ai-integration](https://github.com/topics/kontent-ai-integration) - Repository helps to integrate with other services (see [Integrations info](./Integrations.md) for more).
     * [kontent-ai-tool](https://github.com/topics/kontent-ai-tool) Repository helps with the tooling around Kontent.ai.
+    * [kontent-ai-sample](https://github.com/topics/kontent-ai-tool) Repository is showcasing the usage of Kontent.ai.
 
 ---
 
