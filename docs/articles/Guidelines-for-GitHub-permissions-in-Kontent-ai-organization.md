@@ -4,6 +4,9 @@
 - Developer Relations
 - .NET Maintainers
 - JavaScript Maintainers
+- Experiment team
+- Presales
+- Rich text rangers
 
 ## Adding new members
 New members should be assigned to one of the above teams based on their affiliation. Contact developer relations team at devrel@kontent.ai if you feel like a new team is required.
