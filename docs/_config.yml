@@ -1,1 +1,5 @@
-remote_theme: jekyll/minima
+title: docs 
+description: docs
+theme: just-the-docs
+
+url: https://kontent-ai.github.io/
