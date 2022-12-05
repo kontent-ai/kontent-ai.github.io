@@ -21,7 +21,7 @@
 title: Kontent.ai GitHub docs
 email: devrel@kontent.ai
 description: >- # this means to ignore newlines until "baseurl:"
-  Kontent.ai developer resources in ony place. You can find some useful guidelines here that might help you get your OS project right!
+  Kontent.ai developer resources in one place to help you get your OS project right!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
