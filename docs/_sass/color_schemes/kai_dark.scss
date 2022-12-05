@@ -1,0 +1,21 @@
+@import "./color_schemes/dark";
+// Typography
+
+$body-font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI",
+  roboto, "Helvetica Neue", arial, sans-serif !default;
+$mono-font-family: "SFMono-Regular", menlo, consolas, monospace !default;
+$root-font-size: 16px !default; // Base font-size for rems
+$body-line-height: 1.4 !default;
+$content-line-height: 1.6 !default;
+$body-heading-line-height: 1.25 !default;
+
+// Font size
+// `-sm` suffix is the size at the small (and above) media query
+
+
+$green-000: #c9f2ea;
+$green-100: #8fe7ce;
+$green-200: #5cdbb8;
+$green-300: #3dcca8;
+$link-color: $green-300;
+$btn-primary-color: $green-300;
