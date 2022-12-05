@@ -1,11 +1,20 @@
-# Milestones:
+---
+layout: default
+title: Release
+parent: .NET GitHub actions
+grand_parent: CI & automation
+---
+
+# Release
+
+## Milestones:
 - use [milestones](https://docs.github.com/en/github/managing-your-work-on-github/about-milestones) to track what's about to be released (merged PRs)
   - **Title:**
     - when there is no milestone, create a new one called `vNext`
     - once there are issues/PRs assigned to a milestone, keep the version up to date according to [SemVer](https://semver.org)
   - **Description:** use a milestone's description to keep track of fixed issues and breaking changes (to be used later when releasing a new version)
 
-# Releasing a new version:
+## Releasing a new version:
 Once you're happy with the state of the `master` branch and want to release a new version:
 
 1. Go to [Releases](https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository)

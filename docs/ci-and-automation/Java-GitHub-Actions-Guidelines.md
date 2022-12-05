@@ -1,3 +1,11 @@
+---
+layout: default
+title: Java GitHub actions guidelines
+parent: CI & automation
+---
+
+# Java GitHub actions guidelines
+
 ## What the Action does
 In this Action, the package is built and published using [Gradle](https://gradle.org/). The package is deployed to the [Nexus registry](https://www.sonatype.com/products/repository-oss).
 

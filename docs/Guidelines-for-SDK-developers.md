@@ -1,3 +1,10 @@
+---
+layout: default
+nav_order: 5
+---
+
+# Guidelines for SDK developers
+
 Welcome to the Kontent.ai guidelines for SDK developers! These guidelines cover all the requirements needed to create SDKs for the [Kontent.ai Delivery API](https://kontent.ai/learn/reference/delivery-api/) and should give you a solid starting point for developing SDKs in the framework of your choice.
 
 The guidelines cover the following topics:
@@ -173,4 +180,4 @@ We recommend that the project for your SDK uses the following naming pattern: `[
 
 ## OS project requirements
 
-For your SDK to be included within the list Kontent.ai SDKs, the SDK project has to comply with our checklist for [Publishing an OS project](https://github.com/kontent-ai/.github/wiki/Checklist-for-publishing-a-new-OS-project). You can also read [Guidelines for building tools around Kontent.ai APIs](https://github.com/kontent-ai/.github/wiki/Guidelines-for-Kontent-related-tools) that should help you meet the requirements for creating a successful tool.
+For your SDK to be included within the list Kontent.ai SDKs, the SDK project has to comply with our checklist for [Publishing an OS project](./Checklist-for-publishing-a-new-OS-project.md). You can also read [Guidelines for building tools around Kontent.ai APIs](./Guidelines-for-Kontent.ai-related-tools.md) that should help you meet the requirements for creating a successful tool.

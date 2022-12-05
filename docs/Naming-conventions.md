@@ -1,3 +1,10 @@
+---
+layout: default
+nav_order: 4
+---
+
+# Naming conventions
+
 ## GitHub Repositories
 
 ### Repository name:

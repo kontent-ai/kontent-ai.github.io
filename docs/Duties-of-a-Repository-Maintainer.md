@@ -1,3 +1,9 @@
+---
+layout: default
+nav_order: 7
+---
+
+# Duties of a repository maintainer
 ## The main duties
 The maintainer is responsible for:
 - [setting **the right expectations** about the project](#setting-expectations)

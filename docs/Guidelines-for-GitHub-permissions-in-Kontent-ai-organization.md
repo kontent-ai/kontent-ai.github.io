@@ -1,3 +1,10 @@
+---
+layout: default
+nav_order: 3
+---
+
+# Permission guidelines in Kontent.ai GitHub organization
+
 ## Current Team Structure 
 
 - Integrations

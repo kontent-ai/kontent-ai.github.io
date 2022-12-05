@@ -1,3 +1,12 @@
+---
+layout: default
+title: JS/TS actions guidelines
+parent: Guidelines for JS libraries
+grand_parent: CI & automation
+---
+
+# JS/TS actions guidelines
+
 At this time, the main CI used for building and publishing projects using JavaScript/TypeScript is [CircleCI](https://circleci.com/). The main target is to migrate all automation tasks to GitHub Actions. The research is being conducted, nevertheless, without any specific ETA yet. Right now, releasing the packages is performed manually.
 
 ## What the Action does

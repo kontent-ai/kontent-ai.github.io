@@ -1,3 +1,8 @@
+---
+layout: default
+nav_order: 8
+---
+
 # New REST API feature
 
 SDK implementation is part of the feature opportunity. The new functionality should be covered by tests and reviewed by the maintainers (ideally primary contact) defined in the [CODEOWNERS](https://help.github.com/articles/about-code-owners/) file in the SDK repo.
@@ -6,7 +11,7 @@ SDK implementation is part of the feature opportunity. The new functionality sho
 
 Let's image a new entity in Kontent.ai - let's call it a "note". As a part of the opportunity, the development team wants to introduce new endpoints connected to this entity to the Delivery REST API (to allow fetching user's notes) and adjust one other endpoint connected to the new entity - user entity will have a list of notes' IDs in the response. The ideal workflow would look like this:
 
-> When you want to create a new branch right in the SDK repository, you need write access. In that case, contact anybody from the DevRel team to add according to [Adding new member section](https://github.com/kontent-ai/.github/wiki/Guidelines-for-GitHub-permissions-in-Kontent-ai-organization#adding-new-members).
+> When you want to create a new branch right in the SDK repository, you need write access. In that case, contact anybody from the DevRel team to add according to [Adding new member section](./Guidelines-for-GitHub-permissions-in-Kontent-ai-organization.md).
 
 * Development team decides to implement new opportunity
 * Dev team contacts the maintainers of the respective SDKs. In this case .NET and JS SDKs.
@@ -21,7 +26,7 @@ Let's image a new entity in Kontent.ai - let's call it a "note". As a part of th
 
 * Code follows coding conventions held in this repo
     * For .NET repositories the [standard Microsoft coding conventions appies](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
-    * [Kontent.ai specific guidelines for repositories](https://github.com/kontent-ai/.github/wiki#general-guidelines) applies
+    * [Kontent.ai specific guidelines for repositories](./README.md) applies
     * If there are any other repo-specific requirements - they are described in the repo's README.
 *  Automated tests have been added
     * Sufficient state is that happy path is covered.
@@ -42,4 +47,4 @@ Let's image a new entity in Kontent.ai - let's call it a "note". As a part of th
 
 > Release process is being handled by maintainers (ideally primary contact) defined in the [CODEOWNERS](https://help.github.com/articles/about-code-owners/) file in the SDK repo.
 
-See [Managing the releases and keeping them in sync with product development](https://github.com/kontent-ai/.github/wiki/Duties-of-a-Repository-Maintainer#managing-the-releases-and-keeping-them-in-sync-with-product-development) for more information.
+See [Managing the releases and keeping them in sync with product development](./Duties-of-a-Repository-Maintainer.md#managing-the-releases-and-keeping-them-in-sync-with-product-development) for more information.

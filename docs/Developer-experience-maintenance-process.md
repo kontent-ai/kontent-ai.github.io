@@ -4,7 +4,7 @@ This document describes the process of [repositories maintained by @kontent-ai/d
 
 Some team members have a dedicated **"maintenance day"** in their workload for handling basic operative work and issue triage. These primary contacts are mentioned explicitly in the `CODEOWNERS` file. This group of people is called "DevEx OS maintainers". 
 
-> All [Repository Maintainer duties](https://github.com/kontent-ai/.github/wiki/Duties-of-a-Repository-Maintainer) applies for DevEx OS maintainers.
+> All [Repository Maintainer duties](./Duties-of-a-Repository-Maintainer.md) applies for DevEx OS maintainers.
 
 ## Triage
 

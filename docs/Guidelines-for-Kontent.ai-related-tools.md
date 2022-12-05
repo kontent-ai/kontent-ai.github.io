@@ -1,12 +1,19 @@
+---
+layout: default
+nav_order: 6
+---
+
+# Guidelines for Kontent.ai-related tools
+
 Welcome to Kontent.ai, developers! These guidelines should help you meet all the requirements for creating successful tools around Kontent APIs aligned with our values. It should also give you a solid starting point for development using the framework of your choice.
 
 First of all, you should visit the [Kontent.ai Docs](https://docs.kontent.ai) which gives you overall knowledge about Kontent.ai possibilities and existing tools. Then check out the values of [Kontent.ai GitHub organization](https://github.com/kontent-ai/.github#readme).
 
 ## Guides
 
-Once you know what you want to achieve and you haven't found an existing tool for that, read through the [naming conventions](https://github.com/kontent-ai/.github/wiki/Naming-conventions) and pick the right name for your tool. 
+Once you know what you want to achieve and you haven't found an existing tool for that, read through the [naming conventions](./Naming-conventions.md) and pick the right name for your tool. 
 
-Before you publicly offer any tool, it is recommended to read through the [Kontent.ai Github checklist for publishing an OS project](https://github.com/kontent-ai/.github/wiki/Checklist-for-publishing-a-new-OS-project) to be aware of all enhancements you could implement to make the project more credible and well-perceived by the community.
+Before you publicly offer any tool, it is recommended to read through the [Kontent.ai Github checklist for publishing an OS project](./Checklist-for-publishing-a-new-OS-project.md) to be aware of all enhancements you could implement to make the project more credible and well-perceived by the community.
 
 ## Analytics
 

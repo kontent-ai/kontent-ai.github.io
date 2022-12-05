@@ -1,4 +1,13 @@
-## What the Action does 
+---
+layout: default
+title: .NET GitHub actions
+parent: CI & automation
+has_children: true
+---
+
+# .NET GitHub actions guidelines
+
+## What the action does
 The action gets the tag version, restores dependencies, and builds the project with a given configuration. Then the tests and code coverage tools are run. Eventually, the artifact is packaged and uploaded to the [Nuget](https://www.nuget.org/) and [GitHub Releases](https://docs.github.com/en/github/administering-a-repository/about-releases).
 ## Notes
 - Setting up of .NET environment is performed by [actions/setup-dotnet@v3](https://github.com/actions/setup-dotnet) action.

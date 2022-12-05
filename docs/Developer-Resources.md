@@ -1,3 +1,8 @@
+---
+layout: default
+nav_order: 1
+---
+
 # Developer Resources
 
 Below is a non-exhaustive list of developer resources related to [Kontent.ai](https://kontent.ai/).
@@ -21,13 +26,13 @@ Below are links to various places you can find the Kontent.ai developer communit
 #### Kontent.ai on Twitter
 
 
-- [Kontent.ai's Twitter](https://twitter.com/Kontent_ai) - 
+- [Kontent.ai's Twitter](https://twitter.com/Kontent_ai)
 
 - [Ondřej Chrastina](https://twitter.com/ChrastinaOndrej) - DevRel Leader at Kontent.ai
 
 - [Ondrej Polesny](https://twitter.com/ondrabus) - Developer Evangelist at Kontent.ai
 
-- [Petr Palas (Kentico/Kontent)](https://twitter.com/PetrPalas) - Founder of Kontent.ai
+- [Petr Palas (Kentico/Kontent.ai)](https://twitter.com/PetrPalas) - Founder of Kontent.ai
 
 
 #### Kontent.ai on YouTube

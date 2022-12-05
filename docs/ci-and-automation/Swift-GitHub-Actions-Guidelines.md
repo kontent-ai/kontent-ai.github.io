@@ -1,3 +1,11 @@
+---
+layout: default
+title: Swift GitHub actions guidelines
+parent: CI & automation
+---
+
+# Swift GitHub actions guidelines
+
 ## What the Action does
 Once the release is triggered, dependencies are installed, then the project is built, tested and a new version is released to [Cocoapods](https://cocoapods.org/).
 

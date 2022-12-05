@@ -1,3 +1,11 @@
+---
+layout: default
+title: Ruby GitHub actions guidelines
+parent: CI & automation
+---
+
+# Ruby GitHub actions guidelines
+
 ## What the Action does
 The action runs with the GitHub release. The action installs dependencies, runs tests, and publishes gem to [Rubygems](https://rubygems.org/gems/kontent-delivery-sdk-ruby).
 

@@ -1,9 +1,16 @@
+---
+layout: default
+title: CI & automation
+has_children: true
+nav_order: 9
+---
+
 # Continuous Integration and Continuous Delivery
 > GitHub Actions are our primary automation platform - whenever it's possible, we recommend using [GitHub Actions](https://github.com/features/actions) - this will helps us with better maintenance. This page contains general info about GitHub Actions and their usage. Subpages focus on the specific stacks.
 
 **Continuous integration** is the automation of building and testing. This means that typically, with some code changes, the machine checks whether it’s possible to build the project and whether your tests are passing. **Continuous delivery** is a little bit broader. To sum it up, this automation process will deploy or publish your code to various environments. This might be a little bit abstract and connected with the nature of your project, but you can visualize it as publishing to package registries like NPM or Nuget—or deploying your site to a staging or production environment.
 
-For most Kontent.ai repositories, [we highly recommend](https://github.com/kontent-ai/.github/wiki/Checklist-for-publishing-a-new-OS-project#continuous-integration) adding automation workflows. With some basic automation, we want to perform automatic checks, tests and builds. Moreover, when it makes sense, it's a good practice to automate deploying or publishing processes to the respective registry. With this initiative, we aim to reduce human errors and increase productivity.
+For most Kontent.ai repositories, [we highly recommend](../Checklist-for-publishing-a-new-OS-project.md#continuous-integration) adding automation workflows. With some basic automation, we want to perform automatic checks, tests and builds. Moreover, when it makes sense, it's a good practice to automate deploying or publishing processes to the respective registry. With this initiative, we aim to reduce human errors and increase productivity.
 
 ## GitHub Actions
 GitHub Actions are the feature of GitHub that consists of the API and an environment for running your tasks. You just need to create a YAML file at a specific location in the repository. The configuration .yml file contains all the specific information about the environment, such as [trigger events](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions), [jobs](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs), or [strategies](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategy). Additionally, you can choose the environment where you want to run your tasks—it might be Linux, Windows, or even macOS.

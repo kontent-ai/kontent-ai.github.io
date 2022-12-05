@@ -1,3 +1,11 @@
+---
+layout: default
+title: PHP GitHub actions guidelines
+parent: CI & automation
+---
+
+# PHP Github actions guidelines
+
 ## What the Action does
 This action sets up the PHP environment on the Ubuntu machine. It validates and caches [Composer](https://getcomposer.org/) packages. In the end, it runs a code coverage tool by [Codecov](https://about.codecov.io/). The package is then available on the [Packagist](https://packagist.org/) repository.
 

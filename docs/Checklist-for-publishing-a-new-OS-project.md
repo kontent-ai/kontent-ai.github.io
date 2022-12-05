@@ -1,3 +1,8 @@
+---
+layout: default
+nav_order: 2
+---
+
 # Checklist for publishing a new OS project
 
 Before you publish any repository under Kontent.ai organization on GitHub, please go through this checklist and make sure the repository is up to standards.
