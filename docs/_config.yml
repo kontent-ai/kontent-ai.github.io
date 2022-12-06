@@ -29,6 +29,7 @@ github_username:  jekyll
 markdown: GFM
 logo: "assets/kai-logo-hor-pos-rgb.svg"
 footer_content: "Created for Kontent.ai. Powered by <a href=\"https://github.com/just-the-docs/just-the-docs\">Just The Docs</a>"
+permalink: /:slug
 
 # Build settings
 remote_theme: just-the-docs/just-the-docs
