@@ -12,7 +12,7 @@ Welcome to the Kontent.ai GitHub Developer resources! You can find some useful g
 - [Guidelines for Kontent.ai related tools](./Guidelines-for-Kontent.ai-related-tools.md)
 - [Duties of a Repository Maintainer](./Duties-of-a-Repository-Maintainer.md)
 - [New REST API feature](./New-REST-API-feature.md)
-- [CI, Automation, and Specific Stack Guidelines](./ci-and-automation/CI-and-Automation-Guidelines.md)
+- [CI, Automation, and Specific Stack Guidelines](./ci-and-automation/ci-and-automation.md)
     - .NET Specific Guidelines
         - [.NET GitHub Actions Guidelines](./ci-and-automation/net-guidelines/net-guidelines.md)
         - [Release](./ci-and-automation/net-guidelines/release.md)
