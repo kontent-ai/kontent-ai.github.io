@@ -11,10 +11,16 @@ $body-heading-line-height: 1.25 !default;
 // Font size
 // `-sm` suffix is the size at the small (and above) media query
 
-
+$kontent-ai-black: #231F20;
+$kontent-ai-purple: #6956CC;
 $green-000: #c9f2ea;
 $green-100: #8fe7ce;
 $green-200: #5cdbb8;
 $green-300: #3dcca8;
-$link-color: $green-300;
+
+$link-color: $kontent-ai-purple;
 $btn-primary-color: $green-300;
+$body-text-color: $kontent-ai-black;
+
+
+
