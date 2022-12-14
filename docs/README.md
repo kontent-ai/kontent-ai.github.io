@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 ## Welcome to the Kontent.ai developer resources! 
 #### You can find some useful guidelines here that might help you get your OS project right.
 
