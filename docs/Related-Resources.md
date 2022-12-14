@@ -1,9 +1,9 @@
 ---
 layout: default
-nav_order: 1
+nav_order: 15
 ---
 
-# Developer Resources
+# Related Resources
 
 Below is a non-exhaustive list of developer resources related to [Kontent.ai](https://kontent.ai/).
 
