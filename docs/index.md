@@ -11,7 +11,8 @@ nav_exclude: true
 
 Whether you're developing a [simple tool](./Guidelines-for-Kontent.ai-related-tools.md) or a [full-fledged SDK](./Guidelines-for-SDK-developers.md), our developer resources are the right place to help you jumpstart your project. Make sure that your code and project adheres to our [naming conventions](./Naming-conventions) and go through the [checklist](./Checklist-for-publishing-a-new-OS-project.md) before you publish your work.
 
-For majority of Kontent.ai-related repositories, we recommend having automated workflows in place. [CI & Automation](./ci-and-automation/ci-and-automation.md) section covers these scenarios for all major tech stacks. If you're releasing your tool to its respective package manager, make sure to follow [SemVer](https://semver.org/) guidelines!
+For majority of Kontent.ai-related repositories, we recommend having automated workflows in place.
+[CI & Automation](./ci-and-automation/ci-and-automation.md) section covers these scenarios for all major tech stacks. If you're releasing your tool to its respective package manager, make sure to follow [SemVer](https://semver.org/) guidelines!
 
 If you're looking for a piece of information you couldn't find in this documentation, check out [Related resources](./Related-Resources.md) section for a comprehensive list of both internal and community-maintained sources of information on our product.
 
