@@ -26,7 +26,7 @@ Let's image a new entity in Kontent.ai - let's call it a "note". As a part of th
 
 * Code follows coding conventions held in this repo
     * For .NET repositories the [standard Microsoft coding conventions appies](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
-    * [Kontent.ai specific guidelines for repositories](./README.md) applies
+    * [Kontent.ai specific guidelines for repositories](./Guidelines-for-SDK-developers.md) applies
     * If there are any other repo-specific requirements - they are described in the repo's README.
 *  Automated tests have been added
     * Sufficient state is that happy path is covered.
