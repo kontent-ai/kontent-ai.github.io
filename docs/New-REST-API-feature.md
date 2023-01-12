@@ -11,8 +11,6 @@ SDK implementation is part of the feature opportunity. The new functionality sho
 
 Let's image a new entity in Kontent.ai - let's call it a "note". As a part of the opportunity, the development team wants to introduce new endpoints connected to this entity to the Delivery REST API (to allow fetching user's notes) and adjust one other endpoint connected to the new entity - user entity will have a list of notes' IDs in the response. The ideal workflow would look like this:
 
-> When you want to create a new branch right in the SDK repository, you need write access. In that case, contact anybody from the DevRel team to add according to [Adding new member section](./Guidelines-for-GitHub-permissions-in-Kontent-ai-organization.md).
-
 * Development team decides to implement new opportunity
 * Dev team contacts the maintainers of the respective SDKs. In this case .NET and JS SDKs.
     * They introduce the idea to the maintainer to get early feedback and information about SDK implementation.
@@ -21,6 +19,8 @@ Let's image a new entity in Kontent.ai - let's call it a "note". As a part of th
 * After the implementation part is done (implemented and successfully reviewed) - the maintainer will handle the release process.
 
 ## Implementation checklist
+
+> ⚠ To submit a PR to the repository, **you need to fork it under your GitHub account and create a PR from your fork**. This will prevent GitHub admins to keep track about the membership over the whole comapany, unly over the mainainers.
 
 > Based on https://github.com/kontent-ai/repo-template/blob/master/.github/PULL_REQUEST_TEMPLATE.md
 
