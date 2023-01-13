@@ -20,7 +20,7 @@ Let's image a new entity in Kontent.ai - let's call it a "note". As a part of th
 
 ## Implementation checklist
 
-> ⚠ To submit a PR to the repository, **you need to fork it under your GitHub account and create a PR from your fork**. This will prevent GitHub admins to keep track about the membership over the whole comapany, unly over the mainainers.
+> ⚠ To submit a PR to the repository, **you need to fork it under your GitHub account and create a PR from your fork**. It will prevent GitHub admins to keep track of the membership over the whole company, only over the maintainers.
 
 > Based on https://github.com/kontent-ai/repo-template/blob/master/.github/PULL_REQUEST_TEMPLATE.md
 
