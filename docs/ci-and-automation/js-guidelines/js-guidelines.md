@@ -5,9 +5,21 @@ parent: CI & automation
 has_children: true
 ---
 
+# Guidelines for JS apps
+
+Welcome to the Kontent.ai guidelines for JS app developers! Please, follow the guidelines when you develop a repository with an app written in JS/TS (e.g. sample app, integration template...).
+
+## dependencies and devDependencies
+
+For apps there are no significant reasons to split dependencies into dependencies and dev dependencies. There are some not-too-important reasons and different views on how to split them for apps. We suggest to keep all dependencies in the dependencies field.
+
 # Guidelines for JS libraries
 
 Welcome to the Kontent.ai guidelines for JS library developers! Please, follow the guidelines when you develop a repository with a reusable library written in JS/TS (e.g. SDKs, reusable react components).
+
+## dependencies and devDependencies
+
+Separate dependencies and devDependencies based on which dependencies are needed for the code in the library to run in the clients code-base and which is for the development of your library. See [this article for more detailed explanation](https://betterprogramming.pub/package-jsons-dependencies-in-depth-a1f0637a3129).
 
 ## Use peerDependencies
 
