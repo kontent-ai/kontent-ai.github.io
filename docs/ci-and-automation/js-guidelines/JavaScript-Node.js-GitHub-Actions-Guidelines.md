@@ -61,7 +61,7 @@ steps:
     verbose: true # optional (default = false)
 ``` 
 
-> Feel free to get inpired by this [PR adding codecov to Kontent CLI](https://github.com/kontent-ai/cli/pull/46).
+> Feel free to get inspired by this [PR adding codecov to Kontent CLI](https://github.com/kontent-ai/cli/pull/46).
 
 ## Publish to npm with GitHub release
 
