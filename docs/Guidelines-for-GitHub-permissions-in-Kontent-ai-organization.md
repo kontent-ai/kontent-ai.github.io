@@ -16,7 +16,7 @@ nav_order: 3
 - Rich text rangers
 
 ## Adding new members
-New members should be assigned to one of the above teams based on their affiliation. Contact developer relations team at devrel@kontent.ai if you feel like a new team is required.
+New members should be assigned to one of the above teams based on their affiliation. Contact developer relations team at devrel@kontent.ai if you need to add a member to the GitHub organization or if you feel like a new team is required.
 
 > For all Kontent.ai employees in the GitHub organization - your **GitHub profile should have your real name filled** (nickname/handle is up to you) and ideally a real-life profile picture.
 
