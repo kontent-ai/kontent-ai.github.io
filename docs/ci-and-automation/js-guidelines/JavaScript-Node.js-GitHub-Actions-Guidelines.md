@@ -50,7 +50,7 @@ Kontent.ai GitHub organization has the [Codecov application](https://github.com/
 
 ```yml
 steps:
-- uses npm run text # mostly `jest --collect-coverage` - default reporter is compatible with Codecov
+- uses: npm run test:coverage # mostly `jest --collect-coverage` - default reporter is compatible with Codecov
 - uses: codecov/codecov-action@v3
   with:
     token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
