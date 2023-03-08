@@ -42,6 +42,27 @@ jobs:
 lts/*
 ```
 
+### Codecov support
+
+You can register the repository to be used in the [Codecov](https://about.codecov.io/) test coverage.
+
+Kontent.ai GitHub organization have the [Codecov application](https://github.com/apps/codecov) allowed for all repositories, so the only thing to do is add aditional [codecov github action](https://github.com/codecov/codecov-action) step into the github action workflow.
+
+```yml
+steps:
+- uses npm run text # mostly `jest --collect-coverage` - default reporter is compatible with Codecov
+- uses: codecov/codecov-action@v3
+  with:
+    token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+    files: ./coverage1.xml,./coverage2.xml # optional
+    flags: unittests # optional
+    name: codecov-umbrella # optional
+    fail_ci_if_error: true # optional (default = false)
+    verbose: true # optional (default = false)
+``` 
+
+> Feel free to get inpired by this [PR adding codecov to Kontent CLI](https://github.com/kontent-ai/cli/pull/46).
+
 ## Publish to npm with GitHub release
 
 If you want to publish your package to npm, the best way it to have an action trigger when you create a GitHub release. The published package version should be taken from the release's version (tag) and the version should be commited back into the `package.json` by the action. You can find an example of such an action [here](https://github.com/kontent-ai/react-components/blob/main/.github/workflows/release.yml).
