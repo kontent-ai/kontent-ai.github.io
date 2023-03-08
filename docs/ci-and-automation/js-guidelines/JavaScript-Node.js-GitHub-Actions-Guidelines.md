@@ -46,7 +46,7 @@ lts/*
 
 You can register the repository to be used in the [Codecov](https://about.codecov.io/) test coverage.
 
-Kontent.ai GitHub organization have the [Codecov application](https://github.com/apps/codecov) allowed for all repositories, so the only thing to do is add aditional [codecov github action](https://github.com/codecov/codecov-action) step into the github action workflow.
+Kontent.ai GitHub organization has the [Codecov application](https://github.com/apps/codecov) allowed for all repositories, so the only thing to do is to add additional [codecov github action](https://github.com/codecov/codecov-action) step into the github action workflow.
 
 ```yml
 steps:
