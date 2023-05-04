@@ -3,9 +3,9 @@ layout: default
 nav_order: 8
 ---
 
-# New REST API feature
+# New feature affecting API
 
-SDK implementation is part of the feature opportunity. The new functionality should be covered by tests and reviewed by the maintainers (ideally primary contact) defined in the [CODEOWNERS](https://help.github.com/articles/about-code-owners/) file in the SDK repo.
+SDK implementation is part of the feature opportunity is it affects the products API. The new functionality should be covered by tests and reviewed by the maintainers (ideally primary contact) defined in the [CODEOWNERS](https://help.github.com/articles/about-code-owners/) file in the SDK repo in case actively maintained technologies ([.NET]([url](https://kontent.ai/learn/tutorials/develop-apps/overview/?tech=dotnet)) and [JavaScript](https://kontent.ai/learn/tutorials/develop-apps/overview/?tech=javascript)) or have the issue filed in the secondary technologies (all but primary from [develop apps guidepost](https://kontent.ai/learn/tutorials/develop-apps/overview)).
 
 ## Ideal process of the submission
 
@@ -17,6 +17,7 @@ Let's image a new entity in Kontent.ai - let's call it a "note". As a part of th
 * Once the feature is defined and the REST API contract is known (not implemented), the development team [submits the GitHub issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue) based on [feature request template](https://github.com/kontent-ai/repo-template/blob/master/.github/ISSUE_TEMPLATE/feature_request.md) describing the new feature to the respective SDK repositories listed in [develop apps overview](https://kontent.ai/learn/tutorials/develop-apps/overview) (such as this one for [.NET](https://github.com/kontent-ai/kontent-management-sdk-net/issues/120) and [JS](https://github.com/kontent-ai/kontent-management-sdk-js/issues/58)). *You can split the functionality into logical parts as separate issues - it is up to maintainer<->dev team agreement.*
     * For primary stacks - **Javascript and .NET** - assigns issue to dev team members -> see [Implementation checklist](#implementation-checklist) for scope.
 * After the implementation part is done (implemented and successfully reviewed) - the maintainer will handle the release process.
+* File the issue to respective SDK repositories of secondary technologies.
 
 ## Implementation checklist
 
