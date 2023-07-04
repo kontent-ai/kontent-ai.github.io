@@ -40,7 +40,7 @@ The maintainer must ensure the repository is in a healthy state. This includes:
 - making sure obsolete and broken packages are marked as deprecated and unlisted from package repositories (such as NuGet, npm, etc.)
 - adherence to [internal standards checklist](Checklist-for-publishing-a-new-OS-project)
 
-### Regular vulnerability check
+### Security vulnerability
 
 > ℹ Following section applies only to the repositories that are labeled `check-vulnerabilities` under the Kontent.ai GitHub organization.
 
