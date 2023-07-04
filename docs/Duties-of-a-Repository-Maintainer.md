@@ -50,7 +50,7 @@ The primary maintainer (first defined in the `CODEOWNERS` file or a leader of th
 
 #### Process
 - Every first Monday of the month a notification is poping for the vulnerability check
-- Primary maintainer will go through the assigned repositories and check Dependabot alerts
+- Primary maintainer will go through the assigned repositories and check Dependabot alerts and deal with all High severity issues (others are optional)
 - Once done - the progress is submitted to the list in the notification (internal wiki log)
 
 ## Managing the releases and keeping them in sync with product development
