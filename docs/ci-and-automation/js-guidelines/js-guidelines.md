@@ -9,7 +9,7 @@ has_children: true
 
 ## Formatting
 
-We use [dprint](dprint.dev) as a formatter. Use our [shared configuration](https://github.com/kontent-ai/dprint-config) to format your project. Readme in the repository should guide you through the setup process.
+We use [dprint](https://dprint.dev/) as a formatter. Use our [shared configuration](https://github.com/kontent-ai/dprint-config) to format your project. Readme in the repository should guide you through the setup process.
 
 ## Linting
 
