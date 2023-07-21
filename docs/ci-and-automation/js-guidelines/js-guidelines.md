@@ -5,6 +5,16 @@ parent: CI & automation
 has_children: true
 ---
 
+# Code style
+
+## Formatting
+
+We use [dprint](dprint.dev) as a formatter. Use our [shared configuration](https://github.com/kontent-ai/dprint-config) to format your project. Readme in the repository should guide you through the setup process.
+
+## Linting
+
+We use [eslint](https://eslint.org/) as a linter. Extend our [shared configuration](https://github.com/kontent-ai/eslint-config). Readme in the repository should guide you through the setup process. 
+
 # Guidelines for JS apps
 
 Welcome to the Kontent.ai guidelines for JS app developers! Please, follow the guidelines when you develop a repository with an app written in JS/TS (e.g. sample app, integration template...).
