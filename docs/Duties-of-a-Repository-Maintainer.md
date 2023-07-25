@@ -49,10 +49,10 @@ The primary maintainer (first defined in the `CODEOWNERS` file or a leader of th
 - is responsible to have the [Dependabot updates](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-supply-chain-security#what-are-dependabot-updates) and [Dependabot alerts](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-supply-chain-security#what-are-dependabot-alerts) turned on
 
 #### Process
-- Every first Monday of the month a notification is poping for the vulnerability check
+- Every first Monday of the month a notification pops up for the vulnerability check
 - Primary maintainer will go through the assigned repositories and check Dependabot alerts and deal with all High severity issues (others are optional)
-- Once done - the progress is submitted to the list in the notification (internal wiki log)
-- Release the patch version (or follow the semver.org, if there are any breaking changes)
+- Once done, the progress is submitted to the list in the notification (internal wiki log)
+- Release a patch version (or follow the semver.org, if there are any breaking changes)
 
 ## Managing the releases and keeping them in sync with product development
 The maintainer is responsible for making sure:
