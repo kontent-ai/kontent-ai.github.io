@@ -76,8 +76,11 @@ jobs: # Specifies the section where we describe our jobs.
       uses: github/codeql-action/analyze@v1
 ```
 
+### Commits to protected branches
+You might come up with a script that tries to commit to the main branch which should be under protection rules. For instance, a workflow that at first changes the version of the package and then commits it into the package.json). These steps would require setting up [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) and enabling force pushes into the branch. Due to these inconveniences, we decided to not use this solution and rather find other ways to release via action (e.g. set the version of the package manually and then only do the release in Github Action).
+
 ### Real-world examples and syntax
-It’s not possible to cover all capabilities and combinations for each stack here. Nevertheless, in the subpages, you can find some real-world examples—you can choose them for scaffolding your Action quickly for your specific stack and use case. They showcase configuration for various languages, platforms, and publishing to external package repositories. However, before you start with more advanced Actions, you'll need some more commands.
+It’s not possible to cover all capabilities and combinations for each stack here. Nevertheless, in the subpages, you can find some real-world examples—you can choose them for scaffolding your Action quickly for your specific stack and use case. They showcase configurations for various languages, platforms, and publishing to external package repositories. However, before you start with more advanced Actions, you'll need some more commands.
 * [on.release.types](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#release) - Runs the action when a specific release event occurs.
 * [on.<push|pull_request>.<branches|tags>](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestbranchestags) - Runs an action when push or pull request event occurs on a specific branch.
 * [jobs.<job_id>.strategy.matrix](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix) - Allows to set different job configurations.
