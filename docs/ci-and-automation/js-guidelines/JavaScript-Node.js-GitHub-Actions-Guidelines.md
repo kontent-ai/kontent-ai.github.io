@@ -69,7 +69,8 @@ If you want to publish your package to npm, the best way it to have an action tr
 
 > **Warning**
 > 
-> During the release-triggered action the checked-out ref is the tag of the release. To be able to commit, you will need to explicitly specify to what branch you want to commit or check out the branch.
+> - During the release-triggered action the checked-out ref is the tag of the release. To be able to commit, you will need to explicitly specify to what branch you want to commit or check out the branch.
+> - Be aware of publishing to the protected branches. For more information follow [this link](https://github.com/kontent-ai/kontent-ai.github.io/blob/main/docs/ci-and-automation/ci-and-automation.md#real-world-examples-and-syntax).
 
 ### Prerelease publishing
 
