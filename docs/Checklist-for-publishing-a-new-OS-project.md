@@ -85,6 +85,10 @@ Store the license in the "LICENSE.md" file in the root of the repository because
 
 Use [repo-template](https://github.com/kontent-ai/repo-template) for the templates and Code of Conduct.
 
+### Security policy
+
+Use [repo-template](https://github.com/kontent-ai/repo-template) for the template of the "SECURITY.md" file.
+
 ## GitHub features
 - _🔒 Required for private repositories too_
 Decide which features you turn on or off. This will help set expectations.
