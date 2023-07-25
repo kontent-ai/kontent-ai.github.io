@@ -149,7 +149,8 @@ Setting up CI, makes it easy for contributors to know whether their code works a
 
 ## Protect the master branch
 You can learn more about branch protection in the [documentation](https://docs.github.com/en/github/administering-a-repository/managing-a-branch-protection-rule#about-branch-protection-rules).
-![Branch protection](https://i.imgur.com/B4LVfUu.png)
+![Branch protection](https://github.com/kontent-ai/kontent-ai.github.io/assets/52500882/d4d9ba86-a1d0-488f-a7db-300c47f38298)
+
 
 ## Add collaborating teams
 - _🔒 Required for private repositories too_
