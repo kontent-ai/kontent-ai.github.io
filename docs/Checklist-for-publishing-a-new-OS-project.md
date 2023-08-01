@@ -60,7 +60,7 @@ README should contain:
 
 More complex topics and examples can be covered in separate articles in GitHub Wiki (or an external system such as ReadTheDocs).
 
-> The template of the README file is stored in [repo-template](https://github.com/kontent-ai/repo-template).
+> The template of the README file is stored in [special ".github" repository](https://github.com/kontent-ai/.github).
 
 ### Contributing
 From the README or CONTRIBUTING files, it should be clear:
@@ -77,17 +77,17 @@ From the README or CONTRIBUTING files, it should be clear:
 
 Use the MIT license and set "Kontent.ai" as the copyright holder. If you want to use a different license, please contact the [DevRel team](mailto:devrel@kontent.ai).
 
-Store the license in the "LICENSE.md" file in the root of the repository because it is being linked from "CONTRIBUTING.md" document.
+Store the license in the "LICENSE.md" file.
 
-> The template of the LICENSE file is stored in [repo-template](https://github.com/kontent-ai/repo-template).
+> The template of the LICENSE file is stored in [special ".github" repository](https://github.com/kontent-ai/.github).
 
 ### Issue & pull request templates & Code of Conduct
 
-Use [repo-template](https://github.com/kontent-ai/repo-template) for the templates and Code of Conduct.
+[Automatically used from [special ".github" repository](https://github.com/kontent-ai/.github), [see the docs for more details](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file).
 
 ### Security policy
 
-Use [repo-template](https://github.com/kontent-ai/repo-template) for the template of the "SECURITY.md" file.
+[Automatically used from [special ".github" repository](https://github.com/kontent-ai/.github), [see the docs for more details](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file).
 
 ## GitHub features
 - _🔒 Required for private repositories too_
