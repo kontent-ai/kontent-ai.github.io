@@ -83,11 +83,11 @@ Store the license in the "LICENSE.md" file.
 
 ### Issue & pull request templates & Code of Conduct
 
-[Automatically used from [special ".github" repository](https://github.com/kontent-ai/.github), [see the docs for more details](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file).
+Automatically used from [special ".github" repository](https://github.com/kontent-ai/.github), [see the docs for more details](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file).
 
 ### Security policy
 
-[Automatically used from [special ".github" repository](https://github.com/kontent-ai/.github), [see the docs for more details](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file).
+Automatically used from [special ".github" repository](https://github.com/kontent-ai/.github), [see the docs for more details](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file).
 
 ## GitHub features
 - _🔒 Required for private repositories too_
