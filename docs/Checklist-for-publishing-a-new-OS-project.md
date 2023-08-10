@@ -129,7 +129,7 @@ Examples:
     * [nuget](https://docs.microsoft.com/en-us/nuget/)
 * Chat
     * [Stack Overflow](https://stackoverflow.com/) [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kontent-ai)
-    * [Discord](https://discord.gg/SKCxwPtevJ) [![Discord](https://img.shields.io/discord/821885171984891914?label=Discord&logo=Discord&logoColor=white)](https://discord.gg/SKCxwPtevJ) (![Konten Discord](https://img.shields.io/discord/821885171984891914?color=%237289DA&label=Kontent%20Discord&logo=discord))
+    * [Discord](https://discord.gg/SKCxwPtevJ) [![Discord](https://img.shields.io/discord/821885171984891914?label=Discord&logo=Discord&logoColor=white)](https://discord.gg/SKCxwPtevJ) (![Kontent Discord](https://img.shields.io/discord/821885171984891914?color=%237289DA&label=Kontent%20Discord&logo=discord))
 
 > ⚠ Try to unify the style of the badge statuses. If it is not possible group the stypes per line.
 
