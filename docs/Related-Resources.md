@@ -22,7 +22,7 @@ Below are links to various places you can find the Kontent.ai developer communit
 
 
 - [Kontent.ai's Twitter](https://twitter.com/Kontent_ai)
-- [Kontent.ai's LinkeIn](https://www.linkedin.com/company/kontentai)
+- [Kontent.ai's LinkedIn](https://www.linkedin.com/company/kontentai)
 - [Ondřej Chrastina](https://twitter.com/ChrastinaOndrej) - DevRel Leader at Kontent.ai
 - [Ondrej Polesny](https://twitter.com/ondrabus) - Developer Evangelist at Kontent.ai
 - [Petr Palas (Kentico/Kontent.ai)](https://twitter.com/PetrPalas) - Founder of Kontent.ai
