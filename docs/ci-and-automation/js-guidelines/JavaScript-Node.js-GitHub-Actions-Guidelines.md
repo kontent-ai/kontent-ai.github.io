@@ -61,11 +61,11 @@ steps:
     verbose: true # optional (default = false)
 ``` 
 
-> Feel free to get inpired by this [PR adding codecov to Kontent CLI](https://github.com/kontent-ai/cli/pull/46).
+> Feel free to get inspired by this [PR adding codecov to Kontent CLI](https://github.com/kontent-ai/cli/pull/46).
 
 ## Publish to npm with GitHub release
 
-If you want to publish your package to npm, the best way it to have an action trigger when you create a GitHub release. The published package version should be taken from the release's version (tag) and the version should be commited back into the `package.json` by the action. You can find an example of such an action [here](https://github.com/kontent-ai/react-components/blob/main/.github/workflows/release.yml).
+If you want to publish your package to npm, the best way it to have an action trigger when you create a GitHub release. The published package version should be taken from the release's version (tag) and the version should be committed back into the `package.json` by the action. You can find an example of such an action [here](https://github.com/kontent-ai/react-components/blob/main/.github/workflows/release.yml).
 
 > **Warning**
 > 

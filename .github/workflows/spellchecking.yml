@@ -1,0 +1,16 @@
+name: spellchecking
+
+on: [pull_request]
+
+jobs:
+  spellchecking:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        name: Check out the code
+      - uses: actions/setup-node@master
+        name: Run spell check
+        with:
+          node-version: "18"
+      - run: npm install -g cspell
+      - run: cspell --config ./cSpell.json "**/*.md"

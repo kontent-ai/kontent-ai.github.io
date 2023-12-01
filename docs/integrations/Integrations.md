@@ -9,7 +9,7 @@ nav_order: 10
 
 To get a comprehensive overview of all Kontent's integration points, please refer to the [documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview/). 
 
-> Please note, that all integrations provided by the Kontent.ai team on [github](https://github.com/kontent-ai) are essentially an *integration examples*, are open-sourced (under MIT licence), and are meant to be reviewed and adapted by the end-customer. 
+> Please note, that all integrations provided by the Kontent.ai team on [github](https://github.com/kontent-ai) are essentially an *integration examples*, are open-sourced (under MIT license), and are meant to be reviewed and adapted by the end-customer. 
 
 List of all available integration examples can be found through the **kontent-ai-integration** github topic here: 
 

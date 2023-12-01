@@ -18,7 +18,7 @@ nav_order: 4
 
 ### Tagging
 
-If you want to, you can mark your repository by specific [GitHub topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics). This ensures, you get to the topic listing and your repository vill be much more accessible. 
+If you want to, you can mark your repository by specific [GitHub topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics). This ensures, you get to the topic listing and your repository will be much more accessible. 
 
 > Feel free to use multiple topics.
 > Use any other appropriate tags for the repo. (e.g. cli, dotnet, plugin, etc.)
