@@ -1,0 +1,63 @@
+.side-bar {
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $sidebar-color;
+  
+    @include mq(md) {
+      flex-flow: column nowrap;
+      position: fixed;
+      width: $nav-width-md;
+      height: 100%;
+      border-right: $border $border-color;
+      align-items: flex-end;
+    }
+  
+    @include mq(lg) {
+      width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+      min-width: $nav-width;
+    }
+  
+    & + .main {
+      @include mq(md) {
+        margin-left: $nav-width-md;
+      }
+  
+      @include mq(lg) {
+        // stylelint-disable function-name-case
+        // disable for Max(), we want to use the CSS max() function
+        margin-left: Max(
+          #{$nav-width},
+          calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width})
+        );
+        // stylelint-enable function-name-case
+      }
+  
+      .main-header {
+        display: none;
+        background-color: $sidebar-color;
+  
+        @include mq(md) {
+          display: flex;
+          background-color: $body-background-color;
+        }
+  
+        &.nav-open {
+          display: block;
+  
+          @include mq(md) {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+.nav-list .nav-list-item .nav-list-link {
+    color: #d0d0d0;
+}
+
+.nav-list .nav-list-item .nav-list-expander {
+    color: #fa4a19;
+    padding: 0.4rem;
+}
