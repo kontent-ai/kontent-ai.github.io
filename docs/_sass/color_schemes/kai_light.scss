@@ -11,16 +11,17 @@ $body-heading-line-height: 1.25 !default;
 // Font size
 // `-sm` suffix is the size at the small (and above) media query
 
-$kontent-ai-black: #231F20;
-$kontent-ai-purple: #6956CC;
-$green-000: #c9f2ea;
-$green-100: #8fe7ce;
-$green-200: #5cdbb8;
-$green-300: #3dcca8;
+$kai-orange: #fa4a19;
+$kai-purple: #5b4ff5;
+$kai-dark-blue: #022049;
+$kai-grey: #212023;
+$kai-black: #000000;
+$kai-magenta: #ff005c;
 
-$link-color: $kontent-ai-purple;
-$btn-primary-color: $green-300;
-$body-text-color: $kontent-ai-black;
+$link-color: $kai-orange;
+$btn-primary-color: $kai-orange;
+$body-text-color: $kai-black;
+$nav-width: 21rem;
 
 
 

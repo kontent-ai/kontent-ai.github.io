@@ -14,7 +14,7 @@ To get a comprehensive overview of all Kontent's integration points, please refe
 List of all available integration examples can be found through the **kontent-ai-integration** github topic here: 
 
 <p align="center">
-<a href="https://github.com/topics/kontent-ai-integration" target="_blank"><image src="https://img.shields.io/static/v1?label=&message=example integrations&color=3dcca8&style=for-the-badge" alt="Kontent.ai example integrations" width="200"/></a>
+<a href="https://github.com/topics/kontent-ai-integration" target="_blank"><image src="https://img.shields.io/static/v1?label=&message=example%20integrations&color=fa4a19&style=for-the-badge" alt="Kontent.ai example integrations" width="200"/></a>
 </p>
 
 
