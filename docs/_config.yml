@@ -30,6 +30,7 @@ markdown: GFM
 logo: "assets/kai-gradient.png"
 footer_content: "Created for Kontent.ai. Powered by <a href=\"https://github.com/just-the-docs/just-the-docs\">Just The Docs</a>"
 permalink: /:slug
+favicon_ico: "/assets/kai-icon-color.png"
 
 # Build settings
 remote_theme: just-the-docs/just-the-docs
