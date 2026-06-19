@@ -1,6 +1,7 @@
 ---
 layout: default
-nav_order: 15
+title: Resources
+nav_order: 6
 ---
 
 # Related Resources
@@ -20,7 +21,6 @@ Below is a non-exhaustive list of developer resources related to [Kontent.ai](ht
 ## Company channels
 
 - [Blog](https://kontent.ai/blog)
-- [Blog on Dev.to](https://dev.to/kontent_ai)
 - [LinkedIn](https://www.linkedin.com/company/kontentai)
 - [X](https://x.com/Kontent_ai)
 - [YouTube](https://www.youtube.com/@Kontentai)

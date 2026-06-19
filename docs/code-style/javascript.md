@@ -1,11 +1,10 @@
 ---
 layout: default
-title: Guidelines for JS libraries
-parent: CI & automation
-has_children: true
+title: JavaScript / TypeScript
+parent: Code style
 ---
 
-# Code style
+# JavaScript / TypeScript code style
 
 ## Formatting & linting
 

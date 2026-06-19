@@ -1,6 +1,7 @@
 ---
 layout: default
-nav_order: 4
+title: Naming conventions
+nav_order: 2
 ---
 
 # Naming conventions
@@ -24,7 +25,7 @@ If you want to, you can mark your repository by specific [GitHub topics](https:/
 > Use any other appropriate tags for the repo. (e.g. cli, dotnet, plugin, etc.)
 
 * [kontent-ai](https://github.com/topics/kontent-ai) - General topic used in all repositories related to Kontent.ai.
-    * [kontent-ai-integration](https://github.com/topics/kontent-ai-integration) - Repository helps to integrate with other services (see [Integrations info](./integrations/Integrations.md) for more).
+    * [kontent-ai-integration](https://github.com/topics/kontent-ai-integration) - Repository helps to integrate with other services.
     * [kontent-ai-tool](https://github.com/topics/kontent-ai-tool) Repository helps with the tooling around Kontent.ai (SDKs, CLIs, Generators, Mini apps using API etc.).
     * [kontent-ai-sample](https://github.com/topics/kontent-ai-sample) Repository is showcasing the usage of Kontent.ai.
 

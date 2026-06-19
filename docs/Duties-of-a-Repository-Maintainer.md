@@ -1,6 +1,7 @@
 ---
 layout: default
-nav_order: 7
+title: Maintainer duties & SLAs
+nav_order: 5
 ---
 
 # Duties of a repository maintainer
