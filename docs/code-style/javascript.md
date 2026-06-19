@@ -10,17 +10,14 @@ Conventions for Kontent.ai JavaScript/TypeScript projects - both **apps** (sampl
 
 ## Formatting & linting
 
-We use [Biome](https://biomejs.dev/) for both formatting and linting. Extend our shared configuration from [`@kontent-ai/biome-config`](https://github.com/kontent-ai/biome-config) in your `biome.json`:
+We use [Biome](https://biomejs.dev/) for both formatting and linting, configured through shared presets so every project stays consistent:
 
-```jsonc
-{
-  "extends": ["@kontent-ai/biome-config/base"]
-}
-```
+- **[kontent-ai/biome-config](https://github.com/kontent-ai/biome-config)** - the shared Biome configuration to extend in your `biome.json`.
+- **[kontent-ai/eslint-config](https://github.com/kontent-ai/eslint-config)** - the shared [ESLint](https://eslint.org/) configuration, for projects that still need ESLint for rules Biome doesn't cover yet (it can run alongside Biome).
 
-Wire Biome into your `package.json` scripts (e.g. `biome check` locally and `biome ci` in the pipeline) and run it as part of your CI workflow. The shared config's readme guides you through the setup.
+Follow each repository's README for the current package name, install steps, and exactly what to extend - that's the source of truth, so these guidelines don't go stale when the setup changes.
 
-> Some projects still use [ESLint](https://eslint.org/) for rules that Biome doesn't cover yet - our [`@kontent-ai/eslint-config`](https://github.com/kontent-ai/eslint-config) remains available for those cases and can run alongside Biome.
+Wire the tooling into your `package.json` scripts (e.g. `biome check` locally and `biome ci` in the pipeline) and run it as part of your CI workflow.
 
 ## Dependencies
 
