@@ -10,24 +10,25 @@ Conventions for Kontent.ai .NET projects - `.csproj` setup, versioning, and pack
 
 ## Version management
 
-### DOs:
-- Use exclusively the `.csproj`'s `Version` attribute to manage package, assembly, or any other versions.
-- Use `<GenerateAssemblyInfo>true</GenerateAssemblyInfo>`
+We keep a **single source of truth** for the version: the release's Git tag. It's supplied at build time through MSBuild's `Version` property and propagates to the assembly and package versions automatically - **no version number is stored in any source file**.
 
-### DON'Ts:
-- Don't use `PackageVersion`, `AssemblyVersion`, `AssemblyFileVersion`,`AssemblyInformationalVersion`, `VersionSuffix`, `VersionPrefix` (neither in the `.csproj` nor in the `AssemblyInfo.cs`)
-- Don't use `GenerateAssemblyXYZ` attributes in `.csproj` (e.g. `GenerateAssemblyTitleAttribute`)
-- Don't put any version or package information into `AssemblyInfo.cs`
+### DOs
+- Drive every version from the `Version` MSBuild property, supplied at build time (e.g. from the release tag in CI) rather than written into a file.
+- Use `<GenerateAssemblyInfo>true</GenerateAssemblyInfo>`.
 
-To learn more about the purpose of the various attributes, read:
-- https://andrewlock.net/version-vs-versionsuffix-vs-packageversion-what-do-they-all-mean/#fileversion
+### DON'Ts
+- Don't hardcode versions in source files - no `<Version>`, `<PackageVersion>`, `<AssemblyVersion>`, `<AssemblyFileVersion>`, `<AssemblyInformationalVersion>`, `<VersionSuffix>`, or `<VersionPrefix>` in the `.csproj`, and nothing version-related in `AssemblyInfo.cs`.
+- Don't use `GenerateAssemblyXYZ` attributes in the `.csproj` (e.g. `GenerateAssemblyTitleAttribute`).
 
-The `Version` attribute gets propagated to all other version numbers (unless overridden). In case you think you need more granular settings for your project, always contact devrel@kontent.ai.
+To learn more about what the various attributes mean, read [Version vs. VersionSuffix vs. PackageVersion](https://andrewlock.net/version-vs-versionsuffix-vs-packageversion-what-do-they-all-mean/#fileversion). If you think you need more granular settings, contact devrel@kontent.ai.
 
-### `Version`
-In Kontent.ai .NET projects (such as [delivery-sdk-net](https://github.com/kontent-ai/delivery-sdk-net) or [management-sdk-net](https://github.com/kontent-ai/management-sdk-net)) we **don't store a version number anywhere in the source files**.
+### How a release gets its version
+In Kontent.ai .NET projects (such as [delivery-sdk-net](https://github.com/kontent-ai/delivery-sdk-net) or [management-sdk-net](https://github.com/kontent-ai/management-sdk-net)) the version isn't kept in the repository at all - it comes from the release's [Git tag](https://help.github.com/en/articles/creating-releases) and is passed in at build time. `Version` is the only knob you set; it flows through to the NuGet package version (restated on `pack` only because the package is built without a rebuild):
 
-The version of a release is determined by a [tag version](https://help.github.com/en/articles/creating-releases) and promoted to the NuGet package through the combination of [`dotnet build -p:Version=1.2.3`](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-build) and [`dotnet pack -p:PackageVersion=1.2.3`](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-pack).
+```bash
+dotnet build -p:Version=1.2.3
+dotnet pack --no-build -p:PackageVersion=1.2.3
+```
 
 ### Directory.build.props
 This file lets you set shared properties for multiple `.csproj` files. It's automatically being picked up by MSBuild during the build. It's a good idea to use this file for attributes such as `<RepositoryUrl>`, `<IncludeSymbols>`, `<SymbolPackageFormat>`, or `<GenerateDocumentationFile>` that you typically want to manage in one place for the whole repository.
@@ -74,9 +75,19 @@ The following attributes are required:
   <Description>✏️</Description>
   <PackageLicenseExpression>MIT</PackageLicenseExpression>
   <PackageProjectUrl>https://github.com/kontent-ai/✏️</PackageProjectUrl>
-  <PackageIconUrl>https://github.com/kontent-ai/.github/blob/master/images/logo_nuget.png?raw=true</PackageIconUrl>
+  <PackageIcon>icon.png</PackageIcon>
+  <PackageReadmeFile>README.md</PackageReadmeFile>
   <RepositoryUrl>https://github.com/kontent-ai/✏️.git</RepositoryUrl>
 </PropertyGroup>
+```
+
+The icon and README referenced above are embedded in the package (the legacy `PackageIconUrl` is deprecated), so pack the files too:
+
+```xml
+<ItemGroup>
+  <None Include="icon.png" Pack="true" PackagePath="" />
+  <None Include="README.md" Pack="true" PackagePath="" />
+</ItemGroup>
 ```
 
 ## Target framework
