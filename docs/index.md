@@ -24,5 +24,5 @@ If you find any issues with this documentation or you feel like it's missing som
 [![Kontent.ai Discord](https://img.shields.io/discord/821885171984891914?color=%237289DA&label=Kontent%20Discord&logo=discord&style=for-the-badge)](https://bit.ly/kontent-discord)
 
 ### Code of conduct
-The Kontent.ai team is committed to fostering a welcoming community, therefore all our projects has adopted the Contributor Covenant Code of Conduct.
+The Kontent.ai team is committed to fostering a welcoming community, therefore all our projects have adopted the Contributor Covenant Code of Conduct.
 

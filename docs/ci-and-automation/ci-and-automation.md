@@ -6,7 +6,7 @@ nav_order: 9
 ---
 
 # Continuous Integration and Continuous Delivery
-> GitHub Actions are our primary automation platform - whenever it's possible, we recommend using [GitHub Actions](https://github.com/features/actions) - this will helps us with better maintenance. This page contains general info about GitHub Actions and their usage. Subpages focus on the specific stacks.
+> GitHub Actions are our primary automation platform - whenever it's possible, we recommend using [GitHub Actions](https://github.com/features/actions) - this will help us with better maintenance. This page contains general info about GitHub Actions and their usage. Subpages focus on the specific stacks.
 
 **Continuous integration** is the automation of building and testing. This means that typically, with some code changes, the machine checks whether it’s possible to build the project and whether your tests are passing. **Continuous delivery** is a little bit broader. To sum it up, this automation process will deploy or publish your code to various environments. This might be a little bit abstract and connected with the nature of your project, but you can visualize it as publishing to package registries like NPM or Nuget—or deploying your site to a staging or production environment.
 
@@ -42,7 +42,7 @@ key: value
 * [jobs.<job_id>.runs-on](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on) - Provides a shell where you can run your commands.
 
 ### Hello World Action
-Let’s write the action that runs the code analysis tool every week. This action will run on Ubuntu, build the project, and will analyze code from our repository. The explanation of each line is described in the respective comment directly in the code. This example comes from the [.NET Delivery SDK repository](https://github.com/kontent-ai/kontent-delivery-sdk-net/blob/master/.github/workflows/codeql-analysis.yml).
+Let’s write the action that runs the code analysis tool every week. This action will run on Ubuntu, build the project, and will analyze code from our repository. The explanation of each line is described in the respective comment directly in the code. This example comes from the [.NET Delivery SDK repository](https://github.com/kontent-ai/delivery-sdk-net/blob/master/.github/workflows/codeql-analysis.yml).
 ```yaml
 name: "Code scanning - action"   # Represents the name of the whole action.
 on:   # Specifies the section where we describe our build triggers.
@@ -55,25 +55,25 @@ jobs: # Specifies the section where we describe our jobs.
     runs-on: ubuntu-latest   # Describes the environment.
     steps: # Specifies the section where we describe the job's steps.
     - name: Checkout repository # The name of the step.
-      uses: actions/checkout@v2 # Using already existing action actions/checkout@v2. This action provides us with access to the code of the repository.
+      uses: actions/checkout@v4 # Using already existing action actions/checkout@v4. This action provides us with access to the code of the repository.
       with: # Configuration of the action.
         fetch-depth: 2 # We must fetch at least the immediate parents so that if this is a pull request then we can checkout the head.
     - run: git checkout HEAD^2   # If this run was triggered by a pull request event, then checkout the head of the pull request instead of the merge commit.
       if: ${{ github.event_name == 'pull_request' }}   
     - name: Initialize CodeQL   # Initializes the CodeQL tools for scanning.
-      uses: github/codeql-action/init@v1
+      uses: github/codeql-action/init@v3
       with:   # Override language selection by uncommenting this and choosing your languages
         languages: csharp
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 8.0.x
     - name: Install dependencies
       run: dotnet restore   # Command for the shell environment.
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v1
+      uses: github/codeql-action/analyze@v3
 ```
 
 ### Real-world examples and syntax

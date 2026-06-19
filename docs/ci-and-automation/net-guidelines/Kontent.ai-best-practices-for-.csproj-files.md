@@ -24,9 +24,9 @@ To learn more about the purpose of the various attributes, read:
 The `Version` attribute gets propagated to all other version numbers (unless overridden). In case you think you need more granular settings for your project, always contact devrel@kontent.ai.
 
 ### `Version`
-In Kontent.ai .NET projects (such as [kontent-ai-delivery-sdk-net](https://github.com/kontent-ai/delivery-sdk-net) or [kontent-ai-management-sdk-net](https://github.com/kontent-ai/kontent-ai-management-sdk-net) we **don't store a version number anywhere in the source files**.
+In Kontent.ai .NET projects (such as [delivery-sdk-net](https://github.com/kontent-ai/delivery-sdk-net) or [management-sdk-net](https://github.com/kontent-ai/management-sdk-net)) we **don't store a version number anywhere in the source files**.
 
-The version of a release is determined by a [tag version](https://help.github.com/en/articles/creating-releases) and promoted to the NuGet package through the combination of [`dotnet build -p:Version=1.2.3`](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build) and [`dotnet pack -p:PackageVersion=1.2.3`](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-pack).
+The version of a release is determined by a [tag version](https://help.github.com/en/articles/creating-releases) and promoted to the NuGet package through the combination of [`dotnet build -p:Version=1.2.3`](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-build) and [`dotnet pack -p:PackageVersion=1.2.3`](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-pack).
 
 ### Directory.build.props
 This file lets you set shared properties for multiple `.csproj` files. It's automatically being picked up by MSBuild during the build. It's a good idea to use this file for attributes such as `<RepositoryUrl>`, `<IncludeSymbols>`, `<SymbolPackageFormat>`, or `<GenerateDocumentationFile>` that you typically want to manage in one place for the whole repository.
@@ -69,7 +69,7 @@ The following attributes are required:
 <PropertyGroup>
   <Authors>Kontent.ai</Authors>
   <Product>Kontent.ai</Product>
-  <Copyright>© 2022 Kontent.ai. All rights reserved.</Copyright>
+  <Copyright>© 2026 Kontent s.r.o. All rights reserved.</Copyright>
   <Description>✏️</Description>
   <PackageLicenseExpression>MIT</PackageLicenseExpression>
   <PackageProjectUrl>https://github.com/kontent-ai/✏️</PackageProjectUrl>
@@ -80,17 +80,17 @@ The following attributes are required:
 
 ## Target framework
 
-For all [class libraries](https://docs.microsoft.com/en-us/dotnet/standard/class-libraries) target NET Standard 2.0 and .NET 6.
+For all [class libraries](https://learn.microsoft.com/en-us/dotnet/standard/class-libraries) target .NET Standard 2.0 and the current .NET LTS release (.NET 8 at the time of writing).
 
 ```xml
-<TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+<TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
 ```
 
-For other types of projects (i.e. test projects, console applications) target .NET 5 and .NET 6.
+For other types of projects (i.e. test projects, console applications) target the current .NET LTS release (.NET 8).
 
 ```xml
-<TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+<TargetFramework>net8.0</TargetFramework>
 ```
 
-> **Warning**
-> [kontent-ai-aspnetcore](https://github.com/kontent-ai/kontent-ai-aspnetcore) targets .NET 5 and .NET 6, despite being a class library. Subject to change after .NET 7 adoption.
+> **Note**
+> [aspnetcore-extensions](https://github.com/kontent-ai/aspnetcore-extensions) targets only .NET 8 (not .NET Standard 2.0), because it builds on top of ASP.NET Core.

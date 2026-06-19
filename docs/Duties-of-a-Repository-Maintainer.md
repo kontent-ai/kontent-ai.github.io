@@ -36,23 +36,35 @@ The maintainer must ensure the repository is in a healthy state. This includes:
 - the backlog of issues is accurate, up-to-date
   - the issue is labeled correctly, the descriptions are sufficient for anyone from the community to pick them up and process
 - the repo is well documented (READMEs and Wikis are up to date and correspond with the latest version)
+- for larger or high-traffic repositories, a curated [`CLAUDE.md`](./Checklist-for-publishing-a-new-OS-project.md#ai-agent-context-claudemd) is present and kept in sync with the codebase
 - adherence to standards and platform idioms (e.g. semantic versioning, using the right code style, targeting the right platform versions, adhering to conventions)
 - making sure obsolete and broken packages are marked as deprecated and unlisted from package repositories (such as NuGet, npm, etc.)
 - adherence to [internal standards checklist](Checklist-for-publishing-a-new-OS-project)
 
 ### Security Vulnerability
 
-> ℹ Following section applies only to the repositories that are labeled `check-vulnerabilities` under the Kontent.ai GitHub organization.
+> ℹ These SLAs apply only to a curated subset of repositories deemed important - not to every repository in the Kontent.ai GitHub organization. The list of covered repositories is maintained by the developers themselves; repositories are added or removed on a case-by-case basis.
 
 The primary maintainer (first defined in the `CODEOWNERS` file or a leader of the team)
-- is responsible for performing security updates every first week of the month
-- is responsible to have the [Dependabot updates](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-supply-chain-security#what-are-dependabot-updates) and [Dependabot alerts](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-supply-chain-security#what-are-dependabot-alerts) turned on
+- is responsible for keeping [Dependabot updates](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-supply-chain-security#what-are-dependabot-updates) and [Dependabot alerts](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-supply-chain-security#what-are-dependabot-alerts) (or equivalent vulnerability reporting tools) enabled
+- is responsible for checking those tools on a regular basis - often enough to keep remediation within the SLAs below
+
+#### Remediation SLAs
+
+Identified vulnerabilities for which a patch is available are patched; where no patch is available, a workaround is developed and deployed instead. Open-source repositories follow these internal SLAs, measured from the time of internal discovery:
+
+| Severity | Remediation SLA |
+| --- | --- |
+| Critical | 2 weeks |
+| High | 1 month |
+| Medium | 2 months |
+| Low | No specific requirement |
 
 #### Process
-- Every first Monday of the month a notification pops up for the vulnerability check
-- Primary maintainer will go through the assigned repositories and check Dependabot alerts and deal with all High severity issues (others are optional)
-- Once done, the progress is submitted to the list in the notification (internal wiki log)
-- Release a patch version (or follow the semver.org, if there are any breaking changes)
+- Regularly review the vulnerability reports (e.g. Dependabot alerts) for the covered repositories - frequently enough to stay within the [remediation SLAs](#remediation-slas)
+- Address each finding according to its severity, within the corresponding SLA
+- Release a patch version (or follow [SemVer](https://semver.org), if there are any breaking changes)
+- Record the outcome where applicable (e.g. the internal wiki log)
 
 ## Managing the releases and keeping them in sync with product development
 The maintainer is responsible for making sure:
@@ -65,7 +77,7 @@ The release process consists of two steps:
 1. Publishing new version on the package manager (.NET -> Nuget, node/js -> npm, ...)
 1. Ensuring the proper announcement
     * New feature is described in release changelog
-    * Decide whether to announce new version in [product changelog](https://docs.kontent.ai/changelog/product-changelog)/discord/newsletter
+    * Decide whether to announce new version in [product changelog](https://kontent.ai/learn/changelog)/discord/newsletter
 
 ## 💡 Make your life easier
 Many of the tasks can be automated - e.g. [stale pull requests can be closed automatically](https://probot.github.io/apps/stale/), version management to be automated to a large extent, keeping things in sync with other systems like Jira can be automated. Be smart and automate!

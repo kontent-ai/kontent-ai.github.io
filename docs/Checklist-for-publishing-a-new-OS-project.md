@@ -7,7 +7,9 @@ nav_order: 2
 
 Before you publish any repository under Kontent.ai organization on GitHub, please go through this checklist and make sure the repository is up to standards.
 
-* [Repository name](#Repository-name)
+> 💡 **Starting a new repository?** Create it from our [`repo-template`](https://github.com/kontent-ai/repo-template) (hit **Use this template** on GitHub). It comes pre-loaded with the LICENSE, a README template, CONTRIBUTING and CODE_OF_CONDUCT files, a SECURITY policy, and issue/PR templates - covering a large part of this checklist out of the box.
+
+* [Repository name](#repository-name)
 * [Dedicate a maintainer](#dedicate-a-maintainer)🔒
 * [Fulfill Community profile](#community-profile)🔒
 * [Set up GitHub features](#github-features)🔒
@@ -15,6 +17,7 @@ Before you publish any repository under Kontent.ai organization on GitHub, pleas
 * [Add badges](#badges)
 * [Add automatic tests](#tests)❔
 * [Set up Continuous Integration](#continuous-integration)❔
+* [Add AI agent context (CLAUDE.md)](#ai-agent-context-claudemd)❔
 * [Protect Master Branch](#protect-the-master-branch)
 * [Add collaborating teams](#add-collaborating-teams)🔒
 * [Define release process](#releases)
@@ -75,7 +78,7 @@ From the README or CONTRIBUTING files, it should be clear:
 
 ### License
 
-Use the MIT license and set "Kontent.ai" as the copyright holder. If you want to use a different license, please contact the [DevRel team](mailto:devrel@kontent.ai).
+Use the MIT license and set "Kontent s.r.o." as the copyright holder. If you want to use a different license, please contact the [DevRel team](mailto:devrel@kontent.ai).
 
 Store the license in the "LICENSE.md" file.
 
@@ -117,7 +120,7 @@ Pro tip: generate custom badges via https://shields.io/ ![Custom Badge](https://
 
 Examples:
 * Continuous Integration
-    * [![Build & Test](https://github.com/Kentico/kontent-delivery-sdk-net/actions/workflows/integrate.yml/badge.svg)](https://github.com/Kentico/kontent-delivery-sdk-net/actions/workflows/integrate.yml)
+    * [![Build & Test](https://github.com/kontent-ai/delivery-sdk-net/actions/workflows/integrate.yml/badge.svg)](https://github.com/kontent-ai/delivery-sdk-net/actions/workflows/integrate.yml)
 * Test coverage
     * [Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges) ![Code Climate Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)
 * Static code analysis result
@@ -126,12 +129,12 @@ Examples:
 * Deployment/Package status
     * [Netlify](https://www.netlify.com/blog/2019/01/29/sharing-the-love-with-netlify-deployment-badges/)
     * [npm](https://docs.npmjs.com/)
-    * [nuget](https://docs.microsoft.com/en-us/nuget/)
+    * [nuget](https://learn.microsoft.com/en-us/nuget/)
 * Chat
     * [Stack Overflow](https://stackoverflow.com/) [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kontent-ai)
     * [Discord](https://discord.gg/SKCxwPtevJ) [![Discord](https://img.shields.io/discord/821885171984891914?label=Discord&logo=Discord&logoColor=white)](https://discord.gg/SKCxwPtevJ) (![Kontent Discord](https://img.shields.io/discord/821885171984891914?color=%237289DA&label=Kontent%20Discord&logo=discord))
 
-> ⚠ Try to unify the style of the badge statuses. If it is not possible group the stypes per line.
+> ⚠ Try to unify the style of the badge statuses. If it is not possible, group the styles per line.
 
 ## Tests
 - _❔ Optional, but highly recommended._
@@ -144,12 +147,29 @@ Include at least a basic set of (unit) tests.
 ## Continuous Integration
 - _❔ Optional, but highly recommended._
 
-Setting up CI, makes it easy for contributors to know whether their code works as expected. You can find more info about CI practices in the [separate article](./CI-and-Automation-Guidelines.md).
+Setting up CI, makes it easy for contributors to know whether their code works as expected. You can find more info about CI practices in the [separate article](./ci-and-automation/ci-and-automation.md).
 
 - Set up a build agent - [GitHub Actions](https://docs.github.com/en/actions)
   - Make it run tests
   - Fail builds on failed tests
 - Set up [status checks](https://docs.github.com/en/github/administering-a-repository/about-protected-branches#require-status-checks-before-merging) via webhooks
+
+## AI agent context (CLAUDE.md)
+- _❔ Optional, but recommended for larger repositories or those with significant expected developer traffic._
+
+Repositories with a non-trivial codebase or active contribution should include a curated [`CLAUDE.md`](https://docs.claude.com/en/docs/claude-code/memory) file in the repository root. It gives AI coding agents (and new human contributors) a fast, accurate overview of the project so they can be productive without reverse-engineering the whole codebase.
+
+A good `CLAUDE.md` is concise and **curated** - not auto-generated boilerplate - and typically covers:
+
+- **Purpose** - what the repository is and what problem it solves
+- **Architecture overview** - the main projects/packages/modules and how they fit together
+- **Common commands** - how to build, test, lint, and run the project locally (including non-obvious flags used in CI)
+- **Key patterns & conventions** - architectural patterns, code-style rules, and project-specific idioms an agent should follow
+- **Gotchas** - anything surprising: required environment variables, services needed for integration tests, generated code, etc.
+
+Keep it in sync with the codebase as the project evolves - an outdated `CLAUDE.md` is worse than none. For examples, see the `CLAUDE.md` files in [management-sdk-net](https://github.com/kontent-ai/management-sdk-net/blob/master/CLAUDE.md) (.NET) or [rich-text-resolver-js](https://github.com/kontent-ai/rich-text-resolver-js/blob/main/CLAUDE.md) (JS/TS).
+
+> The file is named `CLAUDE.md` for Claude Code; the emerging tool-agnostic equivalent is `AGENTS.md`. You can maintain one and symlink the other if you want to support multiple agents from a single source of truth.
 
 ## Protect the master branch
 You can learn more about branch protection in the [documentation](https://docs.github.com/en/github/administering-a-repository/managing-a-branch-protection-rule#about-branch-protection-rules).
@@ -163,7 +183,7 @@ You can learn more about branch protection in the [documentation](https://docs.g
 
 ## Releases
 - Create an initial release
-- **Always** follow [Semantic Versioning](http://semver.org/)
+- **Always** follow [Semantic Versioning](https://semver.org/)
 
 ## Want to make the repo even more friendly?
 - Read the [Pre-launch checklist](https://opensource.guide/starting-a-project/#your-pre-launch-checklist).

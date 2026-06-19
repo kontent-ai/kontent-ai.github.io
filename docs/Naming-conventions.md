@@ -24,7 +24,7 @@ If you want to, you can mark your repository by specific [GitHub topics](https:/
 > Use any other appropriate tags for the repo. (e.g. cli, dotnet, plugin, etc.)
 
 * [kontent-ai](https://github.com/topics/kontent-ai) - General topic used in all repositories related to Kontent.ai.
-    * [kontent-ai-integration](https://github.com/topics/kontent-ai-integration) - Repository helps to integrate with other services (see [Integrations info](./Integrations.md) for more).
+    * [kontent-ai-integration](https://github.com/topics/kontent-ai-integration) - Repository helps to integrate with other services (see [Integrations info](./integrations/Integrations.md) for more).
     * [kontent-ai-tool](https://github.com/topics/kontent-ai-tool) Repository helps with the tooling around Kontent.ai (SDKs, CLIs, Generators, Mini apps using API etc.).
     * [kontent-ai-sample](https://github.com/topics/kontent-ai-sample) Repository is showcasing the usage of Kontent.ai.
 
@@ -32,7 +32,7 @@ If you want to, you can mark your repository by specific [GitHub topics](https:/
 
 ### Namespaces
 
-We stick to [Microsoft's conventions](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/names-of-namespaces) `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`. Some examples:
+We stick to [Microsoft's conventions](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/names-of-namespaces) `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`. Some examples:
 
   * `Kontent.Ai.*` for Kontent.ai projects under the [Kontent.ai Github organization](https://github.com/kontent-ai/)
   * `<YourCompany>.Kontent.Ai.*` for any externally maintained Kontent.ai projects 

@@ -21,7 +21,7 @@ Once you're happy with the state of the `master` branch and want to release a ne
 2. [Draft a new release](https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository#creating-a-release)
     - **Tag:** version according to [SemVer](https://semver.org), e.g. `4.0.0` or `v4.0.0` - both will work 
     - **Title:** can be a version number or a version number with a codename `4.0.0 - Cannonball`
-    - **Description:** copy & past new features, bugfixes, and breaking changes from the milestone's description
+    - **Description:** copy & paste new features, bugfixes, and breaking changes from the milestone's description
     - **Pre-release:** check if the release is a pre-release and contains a [pre-release suffix](https://semver.org/#spec-item-9)
 3. Publish the release
 4. GitHub Actions will build the source using the `Release` configuration and upload the resulting artifacts to NuGet (and to the GitHub Release)
