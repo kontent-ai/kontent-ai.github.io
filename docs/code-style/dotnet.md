@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Best practices for .csproj files
-parent: .NET GitHub actions
-grand_parent: CI & automation
+title: .NET
+parent: Code style
 ---
 
-# Managing .csproj files
+# .NET code style
+
+Conventions for Kontent.ai .NET projects - `.csproj` setup, versioning, and packaging.
 
 ## Version management
 

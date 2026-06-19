@@ -1,6 +1,7 @@
 ---
 layout: default
-nav_order: 2
+title: Publishing checklist
+nav_order: 1
 ---
 
 # Checklist for publishing a new OS project
@@ -40,13 +41,11 @@ Mark this user into the [CODEOWNERS](https://help.github.com/articles/about-code
 ## [Community profile](https://help.github.com/articles/about-community-profiles-for-public-repositories/)
 - should be "all green"
 - please note that it's available only for public repos and not for forked repos
-![Green community profile](https://i.imgur.com/DVRjA41.png)
 
 ### Description, website, and topics
 - _🔒 Required for private repositories too_
 
 Fill in basic information about the project to make it easy to find it.
-![Topics](https://i.imgur.com/4lNqMK6.png)
 
 ⚠ Tag the repository based on the division according to [Naming conventions](./Naming-conventions.md#github-repositories).
 
@@ -95,8 +94,6 @@ Automatically used from [special ".github" repository](https://github.com/konten
 ## GitHub features
 - _🔒 Required for private repositories too_
 Decide which features you turn on or off. This will help set expectations.
-
-![GH Features](https://i.imgur.com/i6PICQv.png)
 
 ## Expectations
 - _🔒 Required for private repositories too_
@@ -147,7 +144,7 @@ Include at least a basic set of (unit) tests.
 ## Continuous Integration
 - _❔ Optional, but highly recommended._
 
-Setting up CI, makes it easy for contributors to know whether their code works as expected. You can find more info about CI practices in the [separate article](./ci-and-automation/ci-and-automation.md).
+Setting up CI makes it easy for contributors to know whether their code works as expected. We recommend [GitHub Actions](https://docs.github.com/en/actions) as the automation platform.
 
 - Set up a build agent - [GitHub Actions](https://docs.github.com/en/actions)
   - Make it run tests
@@ -178,7 +175,6 @@ You can learn more about branch protection in the [documentation](https://docs.g
 
 ## Add collaborating teams
 - _🔒 Required for private repositories too_
-![Collaborators](https://i.imgur.com/0qkbWe1.png)
 >In most cases, it'll be `Admin` permission for the Developer Relations team and `Write` permission for the Employees team.
 
 ## Releases
