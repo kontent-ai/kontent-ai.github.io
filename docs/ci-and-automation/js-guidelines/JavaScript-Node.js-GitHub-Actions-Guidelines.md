@@ -10,12 +10,12 @@ grand_parent: CI & automation
 At this time, the main CI used for building and publishing projects using JavaScript/TypeScript is Github Actions.
 
 ## What the Action does
-The Action install [npm](http://npmjs.com/) dependencies and can run scripts defined in `package.json` - for instance, building, testing or publishing the artifact.
+The Action installs [npm](https://npmjs.com/) dependencies and can run scripts defined in `package.json` - for instance, building, testing or publishing the artifact.
 
 ## Notes
-- If the project contains browser logic or browser tests,  it might be a good idea to use the Windows environment in `jobs.<name>.runs-on property`. The default virtual environments come with a lot of preinstalled [browsers and tools](https://github.com/actions/virtual-environments/releases).
-- The action uses [actions/setup-node@v2](https://github.com/actions/setup-node) action for setting Node.js environment.
-- Since `actions/setup-node@v2` you can set the node version using `.nvrmc file`.
+- If the project contains browser logic or browser tests,  it might be a good idea to use the Windows environment in `jobs.<name>.runs-on property`. The default runner images come with a lot of preinstalled [browsers and tools](https://github.com/actions/runner-images).
+- The action uses the [actions/setup-node@v4](https://github.com/actions/setup-node) action for setting up the Node.js environment.
+- You can set the Node.js version using a `.nvmrc` file via the `node-version-file` input.
 
 ## [GitHub Action example](https://github.com/kontent-ai/delivery-sdk-js/blob/master/.github/workflows/test.yml)
 - This action runs a command `test:all` defined in the `package.json` file.
@@ -27,9 +27,9 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version-file: '.nvmrc'
     - run: npm ci
@@ -51,7 +51,7 @@ Kontent.ai GitHub organization has the [Codecov application](https://github.com/
 ```yml
 steps:
 - uses: npm run test:coverage # mostly `jest --collect-coverage` - default reporter is compatible with Codecov
-- uses: codecov/codecov-action@v3
+- uses: codecov/codecov-action@v5
   with:
     token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
     files: ./coverage1.xml,./coverage2.xml # optional
@@ -65,7 +65,9 @@ steps:
 
 ## Publish to npm with GitHub release
 
-If you want to publish your package to npm, the best way it to have an action trigger when you create a GitHub release. The published package version should be taken from the release's version (tag) and the version should be committed back into the `package.json` by the action. You can find an example of such an action [here](https://github.com/kontent-ai/react-components/blob/main/.github/workflows/release.yml).
+If you want to publish your package to npm, the best way is to have an action trigger when you create a GitHub release. The published package version should be taken from the release's version (tag) and the version should be committed back into the `package.json` by the action.
+
+We recommend publishing via npm's [trusted publishing](https://docs.npmjs.com/trusted-publishers) (OIDC) instead of a long-lived `NPM_TOKEN`. Configure the package's trusted publisher on npmjs.com to point at your repository and release workflow; the workflow then needs only the `id-token: write` permission and no token secret. Publishing this way also automatically attaches [provenance](https://docs.npmjs.com/generating-provenance-statements) attestation to the package.
 
 > **Warning**
 > 
@@ -81,26 +83,29 @@ on:
     types: [published]
 
 name: publish-to-npm
+
+permissions:
+  id-token: write   # Required for OIDC trusted publishing & provenance
+  contents: read
+
 jobs:
   publish:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Use Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm install
+      - run: npm ci
       - run: npm run lint
       - run: npm run build
-      - run: npm publish 
+      - run: npm publish --access=public
         if: ${{!github.event.release.prerelease}}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_API_KEY }}
       - run: npm publish --tag prerelease
         if: ${{github.event.release.prerelease}}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_API_KEY }}
 ```
+
+> With trusted publishing configured, no `NODE_AUTH_TOKEN`/`NPM_TOKEN` is needed - the `id-token: write` permission lets npm authenticate via OIDC. Make sure your npm CLI is recent enough to support trusted publishing (npm 11.5.1+); GitHub-hosted runners with current Node.js already include it.

@@ -7,13 +7,19 @@ has_children: true
 
 # Code style
 
-## Formatting
+## Formatting & linting
 
-We use [dprint](https://dprint.dev/) as a formatter. Use our [shared configuration](https://github.com/kontent-ai/dprint-config) to format your project. Readme in the repository should guide you through the setup process.
+We use [Biome](https://biomejs.dev/) for both formatting and linting. Extend our shared configuration from [`@kontent-ai/biome-config`](https://github.com/kontent-ai/biome-config) in your `biome.json`:
 
-## Linting
+```jsonc
+{
+  "extends": ["@kontent-ai/biome-config/base"]
+}
+```
 
-We use [eslint](https://eslint.org/) as a linter. Extend our [shared configuration](https://github.com/kontent-ai/eslint-config). Readme in the repository should guide you through the setup process. 
+Wire Biome into your `package.json` scripts (e.g. `biome check` locally and `biome ci` in the pipeline) and run it as part of your CI workflow. The shared config's readme guides you through the setup.
+
+> Some projects still use [ESLint](https://eslint.org/) for rules that Biome doesn't cover yet - our [`@kontent-ai/eslint-config`](https://github.com/kontent-ai/eslint-config) remains available for those cases and can run alongside Biome.
 
 # Guidelines for JS apps
 

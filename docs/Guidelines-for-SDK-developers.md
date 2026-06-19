@@ -7,6 +7,8 @@ nav_order: 5
 
 Welcome to the Kontent.ai guidelines for SDK developers! These guidelines cover all the requirements needed to create SDKs for the [Kontent.ai Delivery API](https://kontent.ai/learn/reference/delivery-api/) and should give you a solid starting point for developing SDKs in the framework of your choice.
 
+> The functional requirements below are specific to the **Delivery API**. If you're building an SDK or tool around the [Management API](https://kontent.ai/learn/reference/management-api-v2) or any other Kontent.ai API, follow the more general [Guidelines for Kontent.ai-related tools](./Guidelines-for-Kontent.ai-related-tools.md) together with the relevant [API reference](https://kontent.ai/learn/reference). The naming conventions and OS project requirements on this page apply to all of them.
+
 The guidelines cover the following topics:
 
 * [Expected SDK functionality](#expected-functionality)
@@ -25,13 +27,13 @@ The SDK must support the following Delivery API endpoints:
 
 Method | Endpoint
 ---------|----------
-GET | Retrieve a list of content items <br/> `https://deliver.kontent.ai/{project_id}/items`
-GET | Retrieve a content item <br/> `https://deliver.kontent.ai/{project_id}/items/{item_codename}`
-GET | Retrieve a list of content types <br/> `https://deliver.kontent.ai/{project_id}/types`
-GET | Retrieve a content type <br/> `https://deliver.kontent.ai/{project_id}/types/{type_codename}`
-GET | Retrieve a content type element <br/> `https://deliver.kontent.ai/{project_id}/types/{type_codename}/elements/{element_codename}`
-GET | Retrieve a list of taxonomy groups <br/> `https://deliver.kontent.ai/{project_id}/taxonomies`
-GET | Retrieve a taxonomy group <br/> `https://deliver.kontent.ai/{project_id}/taxonomies/{taxonomy_group_codename}`
+GET | Retrieve a list of content items <br/> `https://deliver.kontent.ai/{environment_id}/items`
+GET | Retrieve a content item <br/> `https://deliver.kontent.ai/{environment_id}/items/{item_codename}`
+GET | Retrieve a list of content types <br/> `https://deliver.kontent.ai/{environment_id}/types`
+GET | Retrieve a content type <br/> `https://deliver.kontent.ai/{environment_id}/types/{type_codename}`
+GET | Retrieve a content type element <br/> `https://deliver.kontent.ai/{environment_id}/types/{type_codename}/elements/{element_codename}`
+GET | Retrieve a list of taxonomy groups <br/> `https://deliver.kontent.ai/{environment_id}/taxonomies`
+GET | Retrieve a taxonomy group <br/> `https://deliver.kontent.ai/{environment_id}/taxonomies/{taxonomy_group_codename}`
 
 ### Feature support
 
@@ -108,7 +110,7 @@ Multiple choice | array of strings (selected options) | Can contain up to 250 pr
 Number | decimal | Numbers have the following format: "##########.##########" – 10 numbers before and after the decimal separator.
 Date & time | string | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) formatted string in the following format: YYYY-MM-DDTHH:MM:SSZ.
 Asset | asset reference | The maximum asset size is 2 GB.
-Modular content | array of strings (codenames of selected content items) | No limitation.
+Linked items | array of strings (codenames of selected content items) | No limitation.
 URL slug | string | Hard limit of 100,000 characters.
 Custom element | string | Hard limit of 100,000 characters. **Note**: Custom elements behave as simple text-based elements.
 
@@ -139,17 +141,17 @@ The `message` property in the error message provides a clear specification of wh
 
 ### Analytics
 
-To gauge how much your SDK is used, we strongly recommend that the SDK sends a `X-KC-SDKID` header with each request to the API. The value of the header should be formatted like this `<SDK package origin>;<SDK name>;<SDK version>`, for example, `nuget.org;Kontent.Delivery;9.0.0` for version 9 of the [Delivery .NET SDK](https://github.com/kontent-ai/delivery-sdk-net).
+To gauge how much your SDK is used, we strongly recommend that the SDK sends a `X-KC-SDKID` header with each request to the API. The value of the header should be formatted like this `<SDK package origin>;<SDK name>;<SDK version>`, for example, `nuget.org;Kontent.Ai.Delivery;19.0.0` for version 19 of the [Delivery .NET SDK](https://github.com/kontent-ai/delivery-sdk-net).
 
 This way we can identify the requests coming from your SDK and later provide you with information about its usage.
 
 ### Requesting latest content
 
-By default, the Delivery API might serve stale content (if cached by the Fastly CDN) for performance reasons. In some cases, such as when [reacting to webhook notifications](https://kontent.ai/learn/reference/webhooks-reference/), you might want to request the latest content from your Kontent.ai project.
+By default, the Delivery API might serve stale content (if cached by the Fastly CDN) for performance reasons. In some cases, such as when [reacting to webhook notifications](https://kontent.ai/learn/reference/webhooks-reference/), you might want to request the latest content from your Kontent.ai environment.
 
 To do this within your SDK, include a `X-KC-Wait-For-Loading-New-Content` header and set it to `true` when sending requests to the API.
 
-Including the header will cause the Delivery API to explicitly fetch new content from the specified Kontent.ai project.
+Including the header will cause the Delivery API to explicitly fetch new content from the specified Kontent.ai environment.
 
 ## Delivery API limits
 
