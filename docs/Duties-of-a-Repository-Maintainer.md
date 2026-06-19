@@ -78,7 +78,7 @@ The release process consists of two steps:
 1. Publishing new version on the package manager (.NET -> NuGet, node/js -> npm, ...)
 1. Ensuring the proper announcement
     * New feature is described in release changelog
-    * Decide whether to announce new version in [product changelog](https://kontent.ai/learn/changelog)/discord/newsletter
+    * Decide whether to announce new version in [product changelog](https://kontent.ai/learn/changelog)/newsletter
 
 ## 💡 Make your life easier
 Many of the tasks can be automated - e.g. [stale pull requests can be closed automatically](https://probot.github.io/apps/stale/), version management to be automated to a large extent, keeping things in sync with other systems like Jira can be automated. Be smart and automate!

@@ -20,9 +20,7 @@ New here? Skim the [publishing checklist](./Checklist-for-publishing-a-new-OS-pr
 ---
 ### Contact us!
 
-If you find any issues with this documentation or you feel like it's missing some important information, don't hesitate to contact us at devrel@kontent.ai or join us at our Discord server:
-
-[![Kontent.ai Discord](https://img.shields.io/discord/821885171984891914?color=%237289DA&label=Kontent%20Discord&logo=discord&style=for-the-badge)](https://bit.ly/kontent-discord)
+If you find any issues with this documentation or you feel like it's missing some important information, don't hesitate to contact us at devrel@kontent.ai.
 
 ### Code of conduct
 The Kontent.ai team is committed to fostering a welcoming community, therefore all our projects have adopted the Contributor Covenant Code of Conduct.
