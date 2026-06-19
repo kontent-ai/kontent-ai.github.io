@@ -6,6 +6,8 @@ parent: Code style
 
 # JavaScript / TypeScript code style
 
+Conventions for Kontent.ai JavaScript/TypeScript projects - both **apps** (sample apps, integration templates) and **libraries** (SDKs, reusable components).
+
 ## Formatting & linting
 
 We use [Biome](https://biomejs.dev/) for both formatting and linting. Extend our shared configuration from [`@kontent-ai/biome-config`](https://github.com/kontent-ai/biome-config) in your `biome.json`:
@@ -20,66 +22,44 @@ Wire Biome into your `package.json` scripts (e.g. `biome check` locally and `bio
 
 > Some projects still use [ESLint](https://eslint.org/) for rules that Biome doesn't cover yet - our [`@kontent-ai/eslint-config`](https://github.com/kontent-ai/eslint-config) remains available for those cases and can run alongside Biome.
 
-# Guidelines for JS apps
+## Dependencies
 
-Welcome to the Kontent.ai guidelines for JS app developers! Please, follow the guidelines when you develop a repository with an app written in JS/TS (e.g. sample app, integration template...).
+How you split `dependencies` and `devDependencies` depends on what you're shipping:
 
-## dependencies and devDependencies
+- **Libraries** - split them properly. Anything required at runtime in the consumer's codebase goes in `dependencies`; anything used only to build or test the library goes in `devDependencies`.
+- **Apps** - the split has little practical impact, since nothing installs the app as a package. Keep it simple and put everything in `dependencies`.
 
-For apps there are no significant reasons to split dependencies into dependencies and dev dependencies. There are some not-too-important reasons and different views on how to split them for apps. We suggest to keep all dependencies in the dependencies field.
-
-# Guidelines for JS libraries
-
-Welcome to the Kontent.ai guidelines for JS library developers! Please, follow the guidelines when you develop a repository with a reusable library written in JS/TS (e.g. SDKs, reusable react components).
-
-## dependencies and devDependencies
-
-Separate dependencies and devDependencies based on which dependencies are needed for the code in the library to run in the clients code-base and which is for the development of your library. See [this article for more detailed explanation](https://betterprogramming.pub/package-jsons-dependencies-in-depth-a1f0637a3129).
-
-## Use peerDependencies
-
-Remember to put dependencies into peer dependencies if the dependency should belong there. For example React often belongs to peer dependencies.
-If you are not sure, whether some dependency belongs to peer dependencies, please check out [this post](https://nodejs.org/en/blog/npm/peer-dependencies/) or consult someone from code owners or @kontent-ai/developer-relations.
+Don't pin to an exact version - it forces consumers to download duplicate copies of the same package. Restrict to the major version where possible, and keep dependencies reasonably up to date (review them at least once or twice a year).
 
 ```jsonc
 {
-  // package.json
-  // ...
-  peerDependencies: {
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
-  },
-  // ...
+  "dependencies": {
+    "some-great-package": "^4.0.0"
+  }
 }
 ```
 
-## Tree shaking
+## peerDependencies (libraries)
 
-Try to support tree shaking if possible. If you are not sure how to support tree shaking in you package, check out [this post](https://webpack.js.org/guides/tree-shaking/).
+Put a dependency in `peerDependencies` when the consumer should provide it rather than have your library bundle its own copy - React is the classic example. If you're unsure whether something belongs there, see the [npm `peerDependencies` docs](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#peerdependencies) or ask in `@kontent-ai/developer-relations`.
 
 ```jsonc
 {
-  // package.json
-  // ...
-  "sideEffects": false,
-  // ...
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  }
 }
 ```
-Make sure that any module (marked as pure) can be safely removed if not used by the user (doesn't make any side effects upon evaluation).
 
-## Version of dependencies
+## Tree shaking (libraries)
 
-Don't pin dependencies to a specific version as it makes the users download multiple versions of the same package unnecessarily. Restrict the dependencies only to major version if possible.
+Support [tree shaking](https://webpack.js.org/guides/tree-shaking/) so consumers bundle only what they use. When your package has no import-time side effects, mark it side-effect-free:
 
 ```jsonc
 {
-  // package.json
-  // ...
-  dependencies: {
-    "some-great-package": "^4.0.0",
-  },
-  // ...
+  "sideEffects": false
 }
 ```
 
-Keep the library's dependencies up to date. Try to check them at least once or twice a year.
+Make sure any module you mark as pure can be safely dropped when it isn't used - it must not run side effects on evaluation.
