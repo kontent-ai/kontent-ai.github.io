@@ -117,7 +117,7 @@ Use badges to surface key project status at a glance - you can generate custom o
 - **Continuous integration** - build/test status, e.g. [![Build & Test](https://github.com/kontent-ai/delivery-sdk-net/actions/workflows/integrate.yml/badge.svg)](https://github.com/kontent-ai/delivery-sdk-net/actions/workflows/integrate.yml)
 - **Test coverage** - e.g. [Codecov](https://about.codecov.io/)
 - **Package version** - [npm](https://docs.npmjs.com/) or [NuGet](https://learn.microsoft.com/en-us/nuget/)
-- **Chat / support** - [Stack Overflow](https://stackoverflow.com/tags/kontent-ai) and [Discord](https://discord.gg/SKCxwPtevJ)
+- **Chat / support** - [Stack Overflow](https://stackoverflow.com/tags/kontent-ai)
 
 > ⚠ Keep the badge styles consistent - if you can't, at least group them per line.
 
