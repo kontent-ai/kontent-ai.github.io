@@ -8,9 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@master
         name: Check out the code
-      - uses: actions/setup-node@master
+      - uses: actions/setup-node@v7
         name: Run spell check
         with:
-          node-version: "18"
+          node-version: "lts/*"
       - run: npm install -g cspell
       - run: cspell --config ./cSpell.json "**/*.md"
